@@ -1,0 +1,34 @@
+.ftr_btm {
+    background-color: #000 !important;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.copyright .copyright-left {
+    text-align: left;
+}
+.copyright .copyright-right {
+    text-align: right;
+}
+
+ .ftr_btm a {
+    color: #d60a5c !important;
+    text-decoration: none;
+}
+
+.ftr_btm h6 {
+    background: #000;
+    margin-bottom: 0 !important;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
