@@ -11,7 +11,7 @@ const CreativeConcept = () => {
           {/* <!--Start Newsletter--> */}
           <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 align-self-center">
             <div class="ftr_brand">
-              <a href="#">
+              <a href="/">
                 <img
                   src="/images/logo.png"
                   height="40"

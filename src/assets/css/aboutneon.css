@@ -63,6 +63,7 @@ p {
 {	
 	width: 50%;
 	z-index: 1;
+	position: relative;
 }
 @media (min-width: 992px)
 {
@@ -78,7 +79,7 @@ p {
 		margin-bottom: 40px;
 	}
 }
-/* #introduction .icont .in_img:before
+#introduction .icont .in_img:before
 {
 	content: '';
 	background:url("/public/images/dot.png") repeat;
@@ -91,7 +92,7 @@ p {
 	z-index: -1;
 	-webkit-transform: translate(-15px,-30px);
 	transform: translate(-15px,-30px);
-} */
+}
 
 #introduction .icont .icard .card:hover
 {
@@ -99,7 +100,7 @@ p {
 	background:#202022;
 }
 
-/* #introduction .icont .in_img:after
+#introduction .icont .in_img:after
 {
 	content: '';
 	border: 5px solid;
@@ -114,7 +115,8 @@ p {
 	-webkit-transform: translate(-5px,20px);
 	transform: translate(-5px,20px);
 	z-index: -1;
-} */
+	position: absolute;
+}
 #introduction .icont .in_img img
 {
 	-webkit-border-radius: 0px;

@@ -9,6 +9,7 @@ import Homegallery from '../../Components/HomeComponents/Homegallery'
 import Enquiryform from '../../Components/HomeComponents/Enquiryform'
 import Contact from '../../Components/HomeComponents/Contact'
 import CreativeConcept from '../../Components/HomeComponents/CreativeConcept'
+import Aboutsection from '../../Components/AboutusComponents/Aboutsection'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <MulticolorNeon/>
       <Singlecolor/>
       <Aboutushome/>
+      {/* <Aboutsection image="about.png"/> */}
       <Vison/>
       <Homegallery/>
       <Enquiryform/>

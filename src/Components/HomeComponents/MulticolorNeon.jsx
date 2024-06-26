@@ -10,7 +10,7 @@ const MulticolorNeon = () => {
         <div class="col-lg-6 mb-4 mb-lg-0  text-center">
           {/* <!-- <img src="images/about/images2.jpg" class="img-fluid" alt="about"> --> */}
 
-          <iframe width="560" height="315"
+          <iframe width="560" height="315" title="multicolor-iframe"
            src="https://www.youtube.com/embed/ET80h8ZNKvQ?autoplay=0&loop=1&playlist=ET80h8ZNKvQ">
             </iframe>
         </div>

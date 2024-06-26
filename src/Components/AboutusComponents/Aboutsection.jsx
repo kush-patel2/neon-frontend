@@ -1,18 +1,20 @@
 import React from "react";
-import '../../assets/css/aboutneon.css'
+import "../../assets/css/aboutus.css";
 import { FaGlobeAsia, FaServer, FaShieldAlt } from "react-icons/fa";
 import { LuBarChart3 } from "react-icons/lu";
 
-const Aboutushome = () => {
+const Aboutsection = (props) => {
   return (
     <div>
       <section id="introduction">
         <div class="container">
           <div class="row justify-content-center icont">
             <div class="col-lg-6 col-md-12 in_img align-self-center">
-              
-              <img src="images/about.png" class="img-fluid" alt="in_img" />
-              
+              <img
+                src={`images/${props.image}`}
+                class="img-fluid"
+                alt="in_img"
+              />
             </div>
             <div class="col-lg-6 col-md-12 align-items-center">
               <span class="sub_head">About Neon Creative Concept 11</span>
@@ -27,7 +29,7 @@ const Aboutushome = () => {
                     <div class="d-flex flex-row align-items-center h-100 crd_cnt">
                       <div class="p-2">
                         <div class="card-title">
-                        <FaServer style={{color: "#43e97b"}}/>
+                          <FaServer style={{ color: "#43e97b" }} />
                         </div>
                       </div>
                       <div class="crd_bdy">
@@ -43,8 +45,7 @@ const Aboutushome = () => {
                     <div class="d-flex flex-row align-items-center h-100 crd_cnt">
                       <div class="p-2">
                         <div class="card-title">
-                        <FaShieldAlt style={{color:"#21D4FD"}}/>
-
+                          <FaShieldAlt style={{ color: "#21D4FD" }} />
                         </div>
                       </div>
                       <div class="crd_bdy">
@@ -60,7 +61,7 @@ const Aboutushome = () => {
                     <div class="d-flex flex-row align-items-center h-100 crd_cnt">
                       <div class="p-2">
                         <div class="card-title">
-                        <FaGlobeAsia style={{color:"#FF2525"}}/>
+                          <FaGlobeAsia style={{ color: "#FF2525" }} />
                         </div>
                       </div>
                       <div class="crd_bdy">
@@ -76,7 +77,9 @@ const Aboutushome = () => {
                     <div class="d-flex flex-row align-items-center h-100 crd_cnt">
                       <div class="p-2">
                         <div class="card-title">
-                        <LuBarChart3 style={{color:"#7F00FF", fontSize:"35px"}}/>
+                          <LuBarChart3
+                            style={{ color: "#7F00FF", fontSize: "35px" }}
+                          />
                         </div>
                       </div>
                       <div class="crd_bdy">
@@ -89,6 +92,22 @@ const Aboutushome = () => {
                 </div>
               </div>
             </div>
+            <div class="col-md-12 mt-5">
+              <p
+                class="h_body"
+                
+              ></p>
+              <p>
+                We believe in the value and respect for people and companies,
+                with whom we work as a trusted partner by sharing skills and
+                objectives. Our products are based on the value and reliability
+                of Made in India, interpreting every need connected to the
+                sectors of visual communication, lighting, art, design, and
+                sanitation. The passion in our work and in innovation guides us
+                towards solutions designed to grow together.
+              </p>{" "}
+              <p></p>
+            </div>
           </div>
         </div>
       </section>
@@ -96,4 +115,4 @@ const Aboutushome = () => {
   );
 };
 
-export default Aboutushome;
+export default Aboutsection;

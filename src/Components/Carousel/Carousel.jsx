@@ -67,7 +67,7 @@ const Carousel = () => {
 
 export default Carousel;
 
-<div class="row">
+{/* <div class="row">
   <div
     class="col-md-12 d-flex px-4 justify-content-between cvr-ftr align-items-center flex-wrap"
     style="z-index: 9;"
@@ -105,4 +105,4 @@ export default Carousel;
       </a>
     </div>
   </div>
-</div>;
+</div>; */}

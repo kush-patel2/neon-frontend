@@ -1,0 +1,58 @@
+:root{
+	--color-white: #FEFEFE;
+	--color-lite: #ACACAC;
+	--bg-dark: #101010;
+	--bg-dark-cnt: #181818;
+	--bg-dark-hl: #202022;
+	--color-sec: #FF1744;
+	--color-border: rgba(255,255,255,0.1);
+}
+.gradient-custom{
+    margin-top:90px;
+}
+.gradient-custom .sign-in-form {
+    border-radius: 1rem;
+    background: #181818;
+    padding: 30px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid red;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.gradient-custom .sign-in-form form input {
+    background-color: #020202;
+    font-size: 16px !important;
+    border: 2px solid transparent;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    color: var(--color-white);
+}
+
+input {
+    float: right;
+    margin: 5px 0px;
+    width: 50px;
+}
+
+.gradient-custom .sign-in-form form label {
+    font-size: 16px;
+    font-weight: 500;
+}
+label {
+    float: left;
+    margin: 5px 0px;
+}
+
+.form-control {
+    height: calc(1.5em + 0.75rem + 10px);
+}

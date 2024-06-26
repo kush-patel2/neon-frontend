@@ -35,7 +35,7 @@ const Homegallery = () => {
                   <div class="imgHolder position-relative w-100 overflow-hidden">
                     <img
                       src="/images/Gallery/1.png"
-                      alt="image description"
+                      alt="img description 1"
                       class="img-fluid w-100"
                     />
                   </div>
@@ -53,7 +53,7 @@ const Homegallery = () => {
                   <div class="imgHolder position-relative w-100 overflow-hidden">
                     <img
                       src="/images/Gallery/2.png"
-                      alt="image description"
+                      alt="img description2"
                       class="img-fluid w-100"
                     />
                   </div>
@@ -71,7 +71,7 @@ const Homegallery = () => {
                   <div class="imgHolder position-relative w-100 overflow-hidden">
                     <img
                       src="/images/Gallery/3.png"
-                      alt="image description"
+                      alt="img description3"
                       class="img-fluid w-100"
                     />
                   </div>
