@@ -31,7 +31,7 @@ const Carousel = () => {
     dots: true,
     lazyLoad: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
@@ -67,42 +67,4 @@ const Carousel = () => {
 
 export default Carousel;
 
-{/* <div class="row">
-  <div
-    class="col-md-12 d-flex px-4 justify-content-between cvr-ftr align-items-center flex-wrap"
-    style="z-index: 9;"
-  >
-    <div class="p-2 ftr-pr d-flex flex-row justify-content-between">
-      <a
-        href="#contact"
-        class="button_main btn mb-0"
-        style="border: 1px solid #ff1744; padding: 8px 16px;"
-      >
-        Contact US
-      </a>
-    </div>
-    <div class="p-2 ftr-sc d-flex flex-row justify-content-between">
-      <a
-        href="https://www.facebook.com/neoncreativeconcept11/"
-        target="_blank"
-        class="ml-2"
-      >
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a
-        href="https://instagram.com/neon_creative_concept11?utm_medium=copy_link"
-        target="_blank"
-        class="ml-2"
-      >
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a
-        href="https://wa.me/919724467687/?text=Neon Creative Concept 11"
-        target="_blank"
-        class="ml-2"
-      >
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </div>
-  </div>
-</div>; */}
+

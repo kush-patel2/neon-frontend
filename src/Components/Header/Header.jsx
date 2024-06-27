@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Container, NavDropdown, Badge } from 'react-bootstrap';
 import { FaUser, FaShoppingCart } from 'react-icons/fa';
 import './Header.css'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -21,26 +22,27 @@ const Header = () => {
           <Nav className="ml-auto">
             <Nav.Link href="/aboutus" className="custom-nav-link">About Us</Nav.Link>
             <NavDropdown title="Neon Signs" id="neon-signs-dropdown" className="custom-nav-dropdown">
-              <NavDropdown.Item href="/neonfloro" >Neon Floro</NavDropdown.Item>
-              <NavDropdown.Item href="/multicolorneon">Multicolor Neon</NavDropdown.Item>
+              <Link to="/neonfloro" className='dropdown-item'>Neon Floro</Link>
+              <Link to="/multicolorneon" className='dropdown-item'>Multicolor Neon</Link>
+              {/* <NavDropdown.Item href="/multicolorneon">Multicolor Neon</NavDropdown.Item> */}
               <NavDropdown.Item href="/singlecolorneon">Singlecolor Neon</NavDropdown.Item>
-              <NavDropdown.Item href="#neon4">Controller</NavDropdown.Item>
+              <NavDropdown.Item href="/neon-controller">Controller</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="LED Board" id="LED-board-dropdown" className="custom-nav-dropdown">
-              <NavDropdown.Item href="#neon1" >Acrylic Letters</NavDropdown.Item>
-              <NavDropdown.Item href="#neon2">Led Sign Board</NavDropdown.Item>
-              <NavDropdown.Item href="#neon3">Back Light Board</NavDropdown.Item>
-              <NavDropdown.Item href="#neon4">Reversible Board</NavDropdown.Item>
-              <NavDropdown.Item href="#neon3">Flex Board</NavDropdown.Item>
-              <NavDropdown.Item href="#neon4">Backlit LED Board</NavDropdown.Item>
+              <NavDropdown.Item href="/acrylic-letters" >Acrylic Letters</NavDropdown.Item>
+              <NavDropdown.Item href="/led-sign-board">Led Sign Board</NavDropdown.Item>
+              <NavDropdown.Item href="/backlight-board">Back Light Board</NavDropdown.Item>
+              <NavDropdown.Item href="/reversible-board">Reversible Board</NavDropdown.Item>
+              <NavDropdown.Item href="/flex-board">Flex Board</NavDropdown.Item>
+              <NavDropdown.Item href="/backlit-led-board">Backlit LED Board</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/neongo" className="custom-nav-link">NeonGo</Nav.Link>
             <NavDropdown title="Customize Sign" id="customize-sign-dropdown" className="custom-nav-dropdown">
-              <NavDropdown.Item href="#custom1" >Neon FloRO</NavDropdown.Item>
+              <NavDropdown.Item href="/custom-neon-floro" >Neon FloRO</NavDropdown.Item>
               <NavDropdown.Item href="#custom2">Multicolor Neon</NavDropdown.Item>
               <NavDropdown.Item href="#custom3">Singlecolor Neon</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#gallery" className="custom-nav-link">Gallery</Nav.Link>
+            <Nav.Link href="/gallery" className="custom-nav-link">Gallery</Nav.Link>
             <Nav.Link href="/contactus" className="custom-nav-link">Contact Us</Nav.Link>
           </Nav>
           <Nav className="ml-auto">

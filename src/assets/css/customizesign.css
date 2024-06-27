@@ -1,0 +1,52 @@
+body{
+    color: white;
+}
+.text-glow {
+    text-shadow: 0 0 8px #fff;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+}
+
+a{
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+
+
+/* Design Neon */
+
+.overlay-texts-white {
+    position: absolute;
+    top: 60px;
+    margin-left: 20px;
+    color: #fff !important;
+    width: 90%;
+    font-size: 42px;
+    font-family: Arial, sans-serif;
+    padding: 3px;
+    text-align: center;
+    letter-spacing: 2.4px;
+    animation: neon 1s infinite;
+    text-shadow: 0 0 8px rgb(255, 0, 205);
+}
+
+.cntc_form h1, .cntc_form p, .cntc_form div{
+    color: white;
+}
+
+.button_main {
+    color: var(--color-white) !important;
+    background: transparent !important;
+    border: 2px solid var(--color-sec) !important;
+    padding: 12px 36px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    height: 49px;
+    transition: all 0.3s;
+    
+    border-radius: 5px;
+}

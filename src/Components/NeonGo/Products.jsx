@@ -34,7 +34,7 @@ const Products = () => {
                     <p className="bl_text"></p>
                   </div>
                   <div className="bl_ftr justify-content-between align-items-center">
-                    <a href="#" className="ln1 d-flex align-items-center">
+                    <a href="/neongo" className="ln1 d-flex align-items-center">
                       &nbsp;&nbsp;
                       <div className="lns2">
                         <span className="usr_date">
@@ -42,7 +42,7 @@ const Products = () => {
                         </span>
                       </div>
                     </a>
-                    <a href="#" className="ln2">
+                    <a href="/neongo" className="ln2">
                       Offer Price :{" "}
                       <span className="usr_cmt">&nbsp;&nbsp;₹3000.00</span>
                     </a>
@@ -54,7 +54,7 @@ const Products = () => {
                     style={{height: "100%", minHeight: "47px"}}
                   >
                     <a
-                      href="#"
+                      href="/neongo"
                       className="button_mai"
                     >
                       Add To Cart&nbsp;&nbsp;&nbsp;
@@ -80,7 +80,7 @@ const Products = () => {
                     <p className="bl_text"></p>
                   </div>
                   <div className="bl_ftr justify-content-between align-items-center">
-                    <a href="#" className="ln1 d-flex align-items-center">
+                    <a href="/neongo" className="ln1 d-flex align-items-center">
                       &nbsp;&nbsp;
                       <div className="lns2">
                         <span className="usr_date">
@@ -88,7 +88,7 @@ const Products = () => {
                         </span>
                       </div>
                     </a>
-                    <a href="#" className="ln2">
+                    <a href="/neongo" className="ln2">
                       Offer Price :{" "}
                       <span className="usr_cmt">&nbsp;&nbsp;₹3000.00</span>
                     </a>
@@ -100,7 +100,7 @@ const Products = () => {
                     style={{height: "100%", minHeight: "47px"}}
                   >
                     <a
-                      href="#"
+                      href="/neongo"
                       className="button_mai"
                       onclick="AddInCart(24,0,1,0,'')"
                     >
@@ -127,7 +127,7 @@ const Products = () => {
                     <p className="bl_text"></p>
                   </div>
                   <div className="bl_ftr justify-content-between align-items-center">
-                    <a href="#" className="ln1 d-flex align-items-center">
+                    <a href="/neongo" className="ln1 d-flex align-items-center">
                       &nbsp;&nbsp;
                       <div className="lns2">
                         <span className="usr_date">
@@ -135,7 +135,7 @@ const Products = () => {
                         </span>
                       </div>
                     </a>
-                    <a href="#" className="ln2">
+                    <a href="/neongo" className="ln2">
                       Offer Price :{" "}
                       <span className="usr_cmt">&nbsp;&nbsp;₹3800.00</span>
                     </a>
@@ -147,7 +147,7 @@ const Products = () => {
                     style={{height: "100%", minHeight: "47px"}}
                   >
                     <a
-                      href="#"
+                      href="/neongo"
                       className="button_mai"
                       onclick="AddInCart(25,0,1,0,'')"
                     >
@@ -174,7 +174,7 @@ const Products = () => {
                     <p className="bl_text"></p>
                   </div>
                   <div className="bl_ftr justify-content-between align-items-center">
-                    <a href="#" className="ln1 d-flex align-items-center">
+                    <a href="/neongo" className="ln1 d-flex align-items-center">
                       &nbsp;&nbsp;
                       <div className="lns2">
                         <span className="usr_date">
@@ -182,7 +182,7 @@ const Products = () => {
                         </span>
                       </div>
                     </a>
-                    <a href="#" className="ln2">
+                    <a href="/neongo" className="ln2">
                       Offer Price :{" "}
                       <span className="usr_cmt">&nbsp;&nbsp;₹4100.00</span>
                     </a>
@@ -194,7 +194,7 @@ const Products = () => {
                     style={{height: "100%", minHeight: "47px"}}
                   >
                     <a
-                      href="#"
+                      href="/neongo"
                       className="button_mai"
                       onclick="AddInCart(26,0,1,0,'')"
                     >
@@ -221,7 +221,7 @@ const Products = () => {
                     <p className="bl_text"></p>
                   </div>
                   <div className="bl_ftr justify-content-between align-items-center">
-                    <a href="#" className="ln1 d-flex align-items-center">
+                    <a href="/neongo" className="ln1 d-flex align-items-center">
                       &nbsp;&nbsp;
                       <div className="lns2">
                         <span className="usr_date">
@@ -229,7 +229,7 @@ const Products = () => {
                         </span>
                       </div>
                     </a>
-                    <a href="#" className="ln2">
+                    <a href="/neongo" className="ln2">
                       Offer Price :{" "}
                       <span className="usr_cmt">&nbsp;&nbsp;₹3800.00</span>
                     </a>
@@ -241,7 +241,7 @@ const Products = () => {
                     style={{height: "100%", minHeight: "47px"}}
                   >
                     <a
-                      href="#"
+                      href="/neongo"
                       className="button_mai"
                       onclick="AddInCart(27,0,1,0,'')"
                     >
@@ -268,7 +268,7 @@ const Products = () => {
                     <p className="bl_text"></p>
                   </div>
                   <div className="bl_ftr justify-content-between align-items-center">
-                    <a href="#" className="ln1 d-flex align-items-center">
+                    <a href="/neongo" className="ln1 d-flex align-items-center">
                       &nbsp;&nbsp;
                       <div className="lns2">
                         <span className="usr_date">
@@ -276,7 +276,7 @@ const Products = () => {
                         </span>
                       </div>
                     </a>
-                    <a href="#" className="ln2">
+                    <a href="/neongo" className="ln2">
                       Offer Price :{" "}
                       <span className="usr_cmt">&nbsp;&nbsp;₹2800.00</span>
                     </a>
@@ -288,7 +288,7 @@ const Products = () => {
                     style={{height: "100%", minHeight: "47px"}}
                   >
                     <a
-                      href="#"
+                      href="/neongo"
                       className="button_mai"
                       onclick="AddInCart(28,0,1,0,'')"
                     >
@@ -315,7 +315,7 @@ const Products = () => {
                     <p className="bl_text"></p>
                   </div>
                   <div className="bl_ftr justify-content-between align-items-center">
-                    <a href="#" className="ln1 d-flex align-items-center">
+                    <a href="/neongo" className="ln1 d-flex align-items-center">
                       &nbsp;&nbsp;
                       <div className="lns2">
                         <span className="usr_date">
@@ -323,7 +323,7 @@ const Products = () => {
                         </span>
                       </div>
                     </a>
-                    <a href="#" className="ln2">
+                    <a href="/neongo" className="ln2">
                       Offer Price :{" "}
                       <span className="usr_cmt">&nbsp;&nbsp;₹3800.00</span>
                     </a>
@@ -335,7 +335,7 @@ const Products = () => {
                     style={{height: "100%", minHeight: "47px"}}
                   >
                     <a
-                      href="#"
+                      href="/neongo"
                       className="button_mai"
                       onclick="AddInCart(30,0,1,0,'')"
                     >
@@ -362,7 +362,7 @@ const Products = () => {
                     <p className="bl_text"></p>
                   </div>
                   <div className="bl_ftr justify-content-between align-items-center">
-                    <a href="#" className="ln1 d-flex align-items-center">
+                    <a href="/neongo" className="ln1 d-flex align-items-center">
                       &nbsp;&nbsp;
                       <div className="lns2">
                         <span className="usr_date">
@@ -370,7 +370,7 @@ const Products = () => {
                         </span>
                       </div>
                     </a>
-                    <a href="#" className="ln2">
+                    <a href="/neongo" className="ln2">
                       Offer Price :{" "}
                       <span className="usr_cmt">&nbsp;&nbsp;₹3200.00</span>
                     </a>
@@ -382,7 +382,7 @@ const Products = () => {
                     style={{height: "100%", minHeight: "47px"}}
                   >
                     <a
-                      href="#"
+                      href="/neongo"
                       className="button_mai"
                       onclick="AddInCart(31,0,1,0,'')"
                     >
@@ -409,7 +409,7 @@ const Products = () => {
                     <p className="bl_text"></p>
                   </div>
                   <div className="bl_ftr justify-content-between align-items-center">
-                    <a href="#" className="ln1 d-flex align-items-center">
+                    <a href="/neongo" className="ln1 d-flex align-items-center">
                       &nbsp;&nbsp;
                       <div className="lns2">
                         <span className="usr_date">
@@ -417,7 +417,7 @@ const Products = () => {
                         </span>
                       </div>
                     </a>
-                    <a href="#" className="ln2">
+                    <a href="/neongo" className="ln2">
                       Offer Price :{" "}
                       <span className="usr_cmt">&nbsp;&nbsp;₹2800.00</span>
                     </a>
@@ -429,7 +429,7 @@ const Products = () => {
                     style={{height: "100%", minHeight: "47px"}}
                   >
                     <a
-                      href="#"
+                      href="/neongo"
                       className="button_mai"
                       onclick="AddInCart(32,0,1,0,'')"
                     >
@@ -456,7 +456,7 @@ const Products = () => {
                     <p className="bl_text"></p>
                   </div>
                   <div className="bl_ftr justify-content-between align-items-center">
-                    <a href="#" className="ln1 d-flex align-items-center">
+                    <a href="/neongo" className="ln1 d-flex align-items-center">
                       &nbsp;&nbsp;
                       <div className="lns2">
                         <span className="usr_date">
@@ -464,7 +464,7 @@ const Products = () => {
                         </span>
                       </div>
                     </a>
-                    <a href="#" className="ln2">
+                    <a href="/neongo" className="ln2">
                       Offer Price :{" "}
                       <span className="usr_cmt">&nbsp;&nbsp;₹3800.00</span>
                     </a>
@@ -476,7 +476,7 @@ const Products = () => {
                     style={{height: "100%", minHeight: "47px"}}
                   >
                     <a
-                      href="#"
+                      href="/neongo"
                       className="button_mai"
                       onclick="AddInCart(33,0,1,0,'')"
                     >
@@ -503,7 +503,7 @@ const Products = () => {
                     <p className="bl_text"></p>
                   </div>
                   <div className="bl_ftr justify-content-between align-items-center">
-                    <a href="#" className="ln1 d-flex align-items-center">
+                    <a href="/neongo" className="ln1 d-flex align-items-center">
                       &nbsp;&nbsp;
                       <div className="lns2">
                         <span className="usr_date">
@@ -511,7 +511,7 @@ const Products = () => {
                         </span>
                       </div>
                     </a>
-                    <a href="#" className="ln2">
+                    <a href="/neongo" className="ln2">
                       Offer Price :{" "}
                       <span className="usr_cmt">&nbsp;&nbsp;₹4100.00</span>
                     </a>
@@ -523,7 +523,7 @@ const Products = () => {
                     style={{height: "100%", minHeight: "47px"}}
                   >
                     <a
-                      href="#"
+                      href="/neongo"
                       className="button_mai"
                       onclick="AddInCart(34,0,1,0,'')"
                     >
@@ -550,7 +550,7 @@ const Products = () => {
                     <p className="bl_text"></p>
                   </div>
                   <div className="bl_ftr justify-content-between align-items-center">
-                    <a href="#" className="ln1 d-flex align-items-center">
+                    <a href="/neongo" className="ln1 d-flex align-items-center">
                       &nbsp;&nbsp;
                       <div className="lns2">
                         <span className="usr_date">
@@ -558,7 +558,7 @@ const Products = () => {
                         </span>
                       </div>
                     </a>
-                    <a href="#" className="ln2">
+                    <a href="/neongo" className="ln2">
                       Offer Price :{" "}
                       <span className="usr_cmt">&nbsp;&nbsp;₹3800.00</span>
                     </a>
@@ -570,7 +570,7 @@ const Products = () => {
                     style={{height: "100%", minHeight: "47px"}}
                   >
                     <a
-                      href="#"
+                      href="/neongo"
                       className="button_mai"
                       onclick="AddInCart(35,0,1,0,'')"
                     >
@@ -597,7 +597,7 @@ const Products = () => {
                     <p className="bl_text"></p>
                   </div>
                   <div className="bl_ftr justify-content-between align-items-center">
-                    <a href="#" className="ln1 d-flex align-items-center">
+                    <a href="/neongo" className="ln1 d-flex align-items-center">
                       &nbsp;&nbsp;
                       <div className="lns2">
                         <span className="usr_date">
@@ -605,7 +605,7 @@ const Products = () => {
                         </span>
                       </div>
                     </a>
-                    <a href="#" className="ln2">
+                    <a href="/neongo" className="ln2">
                       Offer Price :{" "}
                       <span className="usr_cmt">&nbsp;&nbsp;₹2400.00</span>
                     </a>
@@ -617,7 +617,7 @@ const Products = () => {
                     style={{height: "100%", minHeight: "47px"}}
                   >
                     <a
-                      href="#"
+                      href="/neongo"
                       className="button_mai"
                       onclick="AddInCart(36,0,1,0,'')"
                     >
@@ -644,7 +644,7 @@ const Products = () => {
                     <p className="bl_text"></p>
                   </div>
                   <div className="bl_ftr justify-content-between align-items-center">
-                    <a href="#" className="ln1 d-flex align-items-center">
+                    <a href="/neongo" className="ln1 d-flex align-items-center">
                       &nbsp;&nbsp;
                       <div className="lns2">
                         <span className="usr_date">
@@ -652,7 +652,7 @@ const Products = () => {
                         </span>
                       </div>
                     </a>
-                    <a href="#" className="ln2">
+                    <a href="/neongo" className="ln2">
                       Offer Price :{" "}
                       <span className="usr_cmt">&nbsp;&nbsp;₹2800.00</span>
                     </a>
@@ -664,7 +664,7 @@ const Products = () => {
                     style={{height: "100%", minHeight: "47px"}}
                   >
                     <a
-                      href="#"
+                      href="/neongo"
                       className="button_mai"
                       onclick="AddInCart(37,0,1,0,'')"
                     >
