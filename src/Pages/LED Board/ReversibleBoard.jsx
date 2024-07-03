@@ -23,7 +23,7 @@ const ReversibleBoard = () => {
     ]
   return (
     <div>
-      <AboutBanner head="LED Board" sub_head="LED Board" />
+      <AboutBanner head="Reversible Board" sub_head="Reversible Board" />
       <ImagesSection
         head="Back Light Board"
         sub_head="Back Light Board"

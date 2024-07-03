@@ -20,6 +20,8 @@ import Flex from './Pages/LED Board/Flex';
 import BacklitLED from './Pages/LED Board/BacklitLED';
 import Gallery from './Pages/Gallery/Gallery';
 import CustomNeonFloro from './Pages/CustomizeSigns/CustomNeonFloro';
+import CustomMultiColor from './Pages/CustomizeSigns/CustomMultiColor';
+import CustomSingleColor from './Pages/CustomizeSigns/CustomSingleColor';
 
 function App() {
   return (
@@ -43,6 +45,8 @@ function App() {
         <Route path="/backlit-led-board" element={ <BacklitLED/>}/>
         <Route path="/gallery" element={ <Gallery/>}/>
         <Route path="/custom-neon-floro" element={ <CustomNeonFloro/>}/>
+        <Route path="/custom-multicolor" element={ <CustomMultiColor/>}/>
+        <Route path="/custom-singlecolor" element={ <CustomSingleColor/>}/>
       </Routes>
       <Footer/>
    

@@ -1,72 +1,40 @@
-import React, { useState } from "react";
+import React from 'react'
 import '../../assets/css/customizesign.css'
+
 import { FaAngleRight } from "react-icons/fa";
 
-const NeonDesign = () => {
-  const [customStyle, setCustomStyle] = useState({fontSize: "25px", fontFamily: "Algerian", boxShadow: "none"})
-  const [customText, setCustomText] = useState("Text Show");
-
-  const [activeSizeButton, setActiveSizeButton] = useState('small');
-  const [activeFontButton, setActiveFontButton] = useState('Algerian');
-  const [activeBackboardButton, setActiveBackboardButton] = useState('none');
-
-  const handleSizeButtonClick = (size, buttonId) => {
-    setCustomStyle((prevStyle) => ({ ...prevStyle, fontSize: size }));
-    setActiveSizeButton(buttonId);
-  };
-
-  const handleFontButtonClick = (fontFamily, buttonId) => {
-    setCustomStyle((prevStyle) => ({ ...prevStyle, fontFamily }));
-    setActiveFontButton(buttonId);
-  };
-
-  const handleBackboardButtonClick = (boxShadow, buttonId) => {
-    setCustomStyle((prevStyle) => ({ ...prevStyle, boxShadow }));
-    setActiveBackboardButton(buttonId);
-  };
-
-  const [qty, setQty] = useState(1);
-  const increment = () => {
-    if(qty<10){
-      setQty(qty+1);
-    }
-  }
-  const decrement = () => {
-    if(qty>1){
-      setQty(qty-1);
-    }
-  }
+const SingleColorDesign = () => {
   return (
     <div>
-      <section id="Design-Neon pt-0">
-        <div className="container dyn_bdy">
+      <section id="Design-Neon" className="Design-Neon pt-0">
+        <div className="container dyn_bdy2">
           <div className="row">
-            <div className="col-md-6">
+             <div className="col-md-6 ps-5"> {/*  */}
               <div className="form-groupp" style={{position: "sticky",top: "0"}}>
                 <div id="MyDiv">
                   <img
-                    src="images/sofa.jpg"
+                    src="images/wall.png"
                     className="img-fluid"
                     alt="project_image"
                     style={{opacity: "0.8", width:"540px"}}
                   />
                   <div
                     id="myDIVTag"
-                    className="overlay-texts-white"
-                    style={customStyle}
+                    className="overlay-texts-white3"
+                    style={{fontSize: "25px", fontFamily: "Algerian"}}
                   >
-                    {customText}
+                    Text Show
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="col-md-6 cntc_form">
+            <div className="col-md-6 cntc_form ps-4 form-color">
               <div className="container">
                 <form>
                   <div className="row">
-                    <div className="col-md-12 ">
-                      <h1>Customize FloRO Sign</h1>
+                    <div className="col-md-12 pe-5 ">  {/* */}
+                      <h1>Customize Your Lights</h1>
                     </div>
                   </div>
                   <div className="row">
@@ -113,7 +81,7 @@ const NeonDesign = () => {
                         onkeyup="calculate()"
                         className="form-control mt-2"
                         placeholder="Text Show"
-                        onChange={(e)=>{setCustomText(e.target.value)}}
+                        required=""
                       ></textarea>
                     </div>
                   </div>
@@ -129,10 +97,10 @@ const NeonDesign = () => {
                     <div className="col-md-4 align-self-center">
                       <button
                         type="button"
+                        className="button_main btn font-size-btn active w-75"
                         data-size="1"
                         id="btnsmall"
-                        className={`button_main btn font-size-btn w-75 ${activeSizeButton === 'small' ? 'active' : ''}`}
-                        onClick={() => handleSizeButtonClick('25px', 'small')}
+                        onclick="document.getElementById('myDIVTag').style.fontSize ='25px';updateButton(1)}"
                       >
                         Small
                       </button>
@@ -140,9 +108,9 @@ const NeonDesign = () => {
                     <div className="col-md-4 align-self-center">
                       <button
                         type="button"
-                        className={`button_main btn font-size-btn w-75 ${activeSizeButton === 'medium' ? 'active' : ''}`}
+                        className="button_main btn inactive font-size-btn w-75"
                         data-size="2"
-                        onClick={() => handleSizeButtonClick('32px', 'medium')}
+                        onclick="document.getElementById('myDIVTag').style.fontSize ='32px';updateButton(2)"
                       >
                         Medium
                       </button>
@@ -150,9 +118,9 @@ const NeonDesign = () => {
                     <div className="col-md-4 align-self-center">
                       <button
                         type="button"
-                        className={`button_main btn font-size-btn w-75 ${activeSizeButton === 'large' ? 'active' : ''}`}
+                        className="button_main btn inactive font-size-btn w-75 "
                         data-size="3"
-                        onClick={() => handleSizeButtonClick('40px', 'large')}
+                        onclick="document.getElementById('myDIVTag').style.fontSize ='40px';updateButton(3)"
                       >
                         Large
                       </button>
@@ -169,26 +137,26 @@ const NeonDesign = () => {
                     <div className="col-md-12 align-self-center">
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'AlexaStdRegular' ? 'active' : ''}`}
+                        className="button_mains btn active"
                         id="btnfont1"
                         style={{fontFamily:'AlexaStdRegular'}}
-                        onClick={() => handleFontButtonClick('AlexaStdRegular', 'AlexaStdRegular')}
-                        >                      
+                        onclick="document.getElementById('myDIVTag').style.fontFamily = 'AlexastyleRegular'"
+                      >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'AlluraRegular' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"AlluraRegular"}}
-                        onClick={() => handleFontButtonClick('AlluraRegular', 'AlluraRegular')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='AlluraRegular'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'AnandaBlackPersonal' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"AnandaBlackPersonal"}}
-                        onClick={() => handleFontButtonClick('AnandaBlackPersonal', 'AnandaBlackPersonal')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='AnandaBlackPersonal'"
                       >
                         ABC
                       </button>
@@ -198,26 +166,25 @@ const NeonDesign = () => {
                     <div className="col-md-12 align-self-center">
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'AnandaPersonal' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"AnandaPersonal"}}
-                        onClick={() => handleFontButtonClick('AnandaPersonal', 'AnandaPersonal')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='AnandaPersonal'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'Autography' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"Autography"}}
-                        onClick={() => handleFontButtonClick('Autography', 'Autography')}
-
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='AutographyDOLnW'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'Belinda Carolyne' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"Belinda Carolyne"}}
-                        onClick={() => handleFontButtonClick('Belinda Carolyne', 'Belinda Carolyne')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='BelindaCarolynex3n8R'"
                       >
                         ABC
                       </button>
@@ -225,27 +192,27 @@ const NeonDesign = () => {
                   </div>
                   <div className="row mt-1">
                     <div className="col-md-12 align-self-center">
-                    <button
+                      <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'BirdsOfParadise' ? 'active' : ''}`}
-                        style={{ fontFamily: "BirdsOfParadise" }}
-                        onClick={() => handleFontButtonClick('BirdsOfParadise', 'BirdsOfParadise')}
+                        className="button_mains btn"
+                        style={{fontFamily:"BirdsOfParadise"}}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='BirdsOfParadisePersonalUseOnly'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'Bostante' ? 'active' : ''}`}
-                        style={{ fontFamily: "Bostante" }}
-                        onClick={() => handleFontButtonClick('Bostante', 'Bostante')}
+                        className="button_mains btn"
+                        style={{fontFamily:"Bostante"}}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='Bostante'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'BrittanySignature' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"BrittanySignature"}}
-                        onClick={() => handleFontButtonClick('BrittanySignature', 'BrittanySignature')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='BrittanySignature'"
                       >
                         ABC
                       </button>
@@ -255,25 +222,25 @@ const NeonDesign = () => {
                     <div className="col-md-12 align-self-center">
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'Algerian' ? 'active' : ''}`}
-                        style={{fontFamily:"Algerian"}}
-                        onClick={() => handleFontButtonClick('Algerian', 'Algerian')}
+                        className="button_mains btn"
+                        style={{fontFamily:"BuffaloItalic"}}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='BuffaloItalic'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'BuffaloItalic1' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"BuffaloItalic1"}}
-                        onClick={() => handleFontButtonClick('BuffaloItalic1', 'BuffaloItalic1')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='BuffaloItalic1'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'BuffaloInline2Grunge' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"BuffaloInline2Grunge"}}
-                        onClick={() => handleFontButtonClick('BuffaloInline2Grunge', 'BuffaloInline2Grunge')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='Buffalo'"
                       >
                         ABC
                       </button>
@@ -283,25 +250,25 @@ const NeonDesign = () => {
                     <div className="col-md-12 align-self-center">
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'Buffalo1' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"Buffalo1"}}
-                        onClick={() => handleFontButtonClick('Buffalo1', 'Buffalo1')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='Buffalo1'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'chemistry' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"chemistry"}}
-                        onClick={() => handleFontButtonClick('chemistry', 'chemistry')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='ChemistryEa8re'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'DancingScript3j68' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"DancingScript3j68"}}
-                        onClick={() => handleFontButtonClick('DancingScript3j68', 'DancingScript3j68')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='DancingScript3j68'"
                       >
                         ABC
                       </button>
@@ -311,25 +278,25 @@ const NeonDesign = () => {
                     <div className="col-md-12 align-self-center">
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'Dancingscriptot' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"Dancingscriptot"}}
-                        onClick={() => handleFontButtonClick('Dancingscriptot', 'Dancingscriptot')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='Dancingscriptot'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'DancingTimeDemoRegular' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"DancingTimeDemoRegular"}}
-                        onClick={() => handleFontButtonClick('DancingTimeDemoRegular', 'DancingTimeDemoRegular')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='DancingTimeDemoRegular'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'Daytonica' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"Daytonica"}}
-                        onClick={() => handleFontButtonClick('Daytonica', 'Daytonica')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='Daytonica'"
                       >
                         ABC
                       </button>
@@ -339,25 +306,25 @@ const NeonDesign = () => {
                     <div className="col-md-12 align-self-center">
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'FeelingPassionate' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"FeelingPassionate"}}
-                        onClick={() => handleFontButtonClick('FeelingPassionate', 'FeelingPassionate')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='FeelingPassionate'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'GreatVibesRegular' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"GreatVibesRegular"}}
-                        onClick={() => handleFontButtonClick('GreatVibesRegular', 'GreatVibesRegular')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='GreatVibesRegular'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'Neoneon' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"Neoneon"}}
-                        onClick={() => handleFontButtonClick('Neoneon', 'Neoneon')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='Neoneon'"
                       >
                         ABC
                       </button>
@@ -367,25 +334,25 @@ const NeonDesign = () => {
                     <div className="col-md-12 align-self-center">
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'OnestySignature' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"OnestySignature"}}
-                        onClick={() => handleFontButtonClick('OnestySignature', 'OnestySignature')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='OnestySignature'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'OnestySignature1' ? 'active' : ''}`}
-                        style={{fontFamily:"OnestySignature1"}}
-                        onClick={() => handleFontButtonClick('OnestySignature1', 'OnestySignature1')}
+                        className="button_mains btn"
+                        style={{fontFamily:"OnestySignature"}}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='OnestySignature'"
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'pirulenrg' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"pirulenrg"}}
-                        onClick={() => handleFontButtonClick('pirulenrg', 'pirulenrg')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='pirulenrg'"
                       >
                         ABC
                       </button>
@@ -395,28 +362,53 @@ const NeonDesign = () => {
                     <div className="col-md-12 align-self-center">
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'RocketClouds' ? 'active' : ''}`}
+                        className="button_mains btn"
                         style={{fontFamily:"RocketClouds"}}
-                        onClick={() => handleFontButtonClick('RocketClouds', 'RocketClouds')}
+                        onclick="document.getElementById('myDIVTag').style.fontFamily ='RocketClouds'"
                       >
                         ABC
                       </button>
                     </div>
                   </div>
+
+                  <div class="row mt-3">
+                            <div class="col-md-12 align-self-center">
+                                <label for="myInputText">Select Your Color</label>
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-md-12 align-self-center">
+
+                                <button type="button" class="circle-red colors me-2" onclick="document.getElementById('myDIVTag').style.color ='red';document.getElementById('myDIVTag').style.textShadow='0 0 5px red'"></button>
+                                <button type="button" class="circle-pink colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(255, 0, 238)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #FF00EE'"></button>
+                                <button type="button" class="circle-green colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(34, 255, 0)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #22FF00'"></button>
+                                <button type="button" class="circle-blue colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(0, 17, 255)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #0011FF'"></button>
+                                <button type="button" class="circle-purple colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(204, 0, 255)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #CC00FF'"></button>
+                                <button type="button" class="circle-orange colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(255, 106, 0)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #FF6A00'"></button>
+                                <button type="button" class="circle-white colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(255, 255, 255)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #FFFFFF'"></button>
+                                <button type="button" class="circle-yellow colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(251, 255, 0)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #FBFF00'"></button>
+                                <button type="button" class="circle-iceblue colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(0, 191, 255)';document.getElementById('myDIVTag').style.textShadow='0 0 5px 	#00bfff'"></button>
+                                <button type="button" class="circle-warmwhite colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(243, 231, 211)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #f3e7d3'"></button>
+
+                            </div>
+                        </div>
+
+                        <hr style={{backgroundColor: "rgb(188, 188, 188)"}} />
                   <div className="row mt-3">
                     <div className="col-md-12 align-self-center">
                       <label for="input">Pick Your Backboard</label>
                     </div>
                   </div>
+                
 
                   <div className="row mt-1">
                     <div className="col-md-12 col-lg-6 col-12 align-self-center">
                       <button
                         type="button"
-                        className={`button_s btn ${activeBackboardButton === 'square' ? 'active' : ''}`}
+                        className="button_s btn inactive"
                         id="btnbox1"
-                        
-                        onClick={() => handleBackboardButtonClick('rgba(0, 0, 0, 0.5) 1px 1px 7px', 'square')}
+                        onclick="AddBoxShadow()"
                       >
                         <img src="/images/Design/box2.png" />
                       </button>
@@ -424,9 +416,9 @@ const NeonDesign = () => {
                     <div className="col-md-12 col-lg-6 col-12 align-self-center">
                       <button
                         type="button"
-                        className={`button_s btn ${activeBackboardButton === 'cut to letter' ? 'active' : ''}`}
+                        className="button_s btn active"
                         id="btnbox2"
-                        onClick={() => handleBackboardButtonClick('none', 'cut to letter')}
+                        onclick="removeBoxShadow()"
                       >
                         <img src="/images/Design/box1.png" />
                       </button>
@@ -435,20 +427,7 @@ const NeonDesign = () => {
 
                   <hr style={{backgroundColor: "rgb(188, 188, 188)"}} />
 
-                  <div className="row mt-3">
-                    <div className="col-md-2 align-self-center">
-                      <input
-                        type="checkbox"
-                        id="Is120Controller"
-                        onchange="calculate()"
-                      />
-                    </div>
-                    <div className="col-md-7 align-self-center">
-                      <label for="myInputText">
-                        Neon FloRo 120+ Wifi Smart App Controller 1500.00 Rs.
-                      </label>
-                    </div>
-                  </div>
+                  
 
                   <div className="row mt-3">
                     <div className="col-md-2 align-self-center">
@@ -460,7 +439,7 @@ const NeonDesign = () => {
                     </div>
                     <div className="col-md-10 align-self-center">
                       <label for="myInputText">
-                        Neon FloRo 220+ Wifi Smart App Controller 2500.00 Rs.
+                      Singlecolor Brightnesss Controller with action mode   550.00 Rs.
                       </label>
                     </div>
                   </div>
@@ -469,11 +448,11 @@ const NeonDesign = () => {
                       <label for="quantity">Quantity</label>
                     </div>
                     <div className="col-md-5 align-self-center">
-                      <div className="counter-container">
+                      <div className="counter-container input-color">
                         <button
                           type="button"
                           className="counter-button"
-                          onClick={()=>decrement()}
+                          onclick="decrement()"
                         >
                           -
                         </button>
@@ -484,14 +463,14 @@ const NeonDesign = () => {
                           name="quantity"
                           min="1"
                           max="100"
-                          value={qty}
+                          value="1"
                           onchange="calculate()"
                           style={{paddingLeft: "12px"}}
                         />
                         <button
                           type="button"
                           className="counter-button"
-                          onClick={()=>increment()}
+                          onclick="increment()"
                         >
                           +
                         </button>
@@ -542,7 +521,7 @@ const NeonDesign = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default NeonDesign;
+export default SingleColorDesign

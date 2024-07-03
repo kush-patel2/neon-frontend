@@ -39,8 +39,8 @@ const Header = () => {
             <Nav.Link href="/neongo" className="custom-nav-link">NeonGo</Nav.Link>
             <NavDropdown title="Customize Sign" id="customize-sign-dropdown" className="custom-nav-dropdown">
               <NavDropdown.Item href="/custom-neon-floro" >Neon FloRO</NavDropdown.Item>
-              <NavDropdown.Item href="#custom2">Multicolor Neon</NavDropdown.Item>
-              <NavDropdown.Item href="#custom3">Singlecolor Neon</NavDropdown.Item>
+              <NavDropdown.Item href="/custom-multicolor">Multicolor Neon</NavDropdown.Item>
+              <NavDropdown.Item href="/custom-singlecolor">Singlecolor Neon</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/gallery" className="custom-nav-link">Gallery</Nav.Link>
             <Nav.Link href="/contactus" className="custom-nav-link">Contact Us</Nav.Link>

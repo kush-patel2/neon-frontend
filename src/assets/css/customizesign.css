@@ -1,16 +1,41 @@
 body{
     color: white;
 }
+
+.Design-Neon {
+    background-color: transparent;
+    color: #FEFEFE;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 50px;
+    padding-top: 60px;
+}
+@keyframes colorChange {
+    0% { opacity: 0.5; } /* Initial color */
+    50% { opacity: 0.8; } /* Intermediate color */
+    100% { opacity: 1; } /* Final color, same as initial */
+  }
+  /* .overlay-texts-white {
+    font-size: 25px;
+    color: rgb(255, 2, 0);  Initial color 
+    font-family: Algerian;
+    animation: colorChange 5s infinite;  Animation with 5 seconds duration, infinite loop 
+  } */
 .text-glow {
     text-shadow: 0 0 8px #fff;
     color: white;
     font-size: 22px;
     text-align: center;
+    text-decoration: none;
 }
 
-a{
-    color: #007bff;
+.marquee1 a{
+    
     text-decoration: none;
+    background-color: transparent;
+}
+.marquee1 a:hover{
+    color: #007bff;
+    text-decoration: underline;
     background-color: transparent;
 }
 
@@ -29,7 +54,7 @@ a{
     padding: 3px;
     text-align: center;
     letter-spacing: 2.4px;
-    animation: neon 1s infinite;
+    animation: colorChange 5s infinite;
     text-shadow: 0 0 8px rgb(255, 0, 205);
 }
 
@@ -50,3 +75,361 @@ a{
     
     border-radius: 5px;
 }
+
+
+
+.button_mains {
+    color: var(--color-white) !important;
+    background: transparent !important;
+    border: 2px solid var(--color-sec) !important;
+    padding: 12px 46px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    height: 50px;
+    width: 145px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.button_mains:hover
+{
+	text-decoration: none;
+	background: #FF1744;
+	color: #fefefe;
+	-webkit-box-shadow: 2px 2px 20px rgba(255, 23, 68,0.7);
+	box-shadow: 2px 2px 20px rgba(255, 23, 68,0.7);
+}
+
+@font-face {
+    font-family: 'AlexaStdRegular';
+    src: url('/src/assets/webfonts/Alexa\ Std\ Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'AlluraRegular';
+    src: url('/src/assets//webfonts/Allura-Regular.otf') format('truetype'); /* Adjust the path if necessary */
+  }  
+
+  @font-face {
+    font-family: 'AnandaBlackPersonal';
+    src: url('/src/assets//webfonts/Ananda\ Black\ Personal\ Use.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AnandaPersonal';
+    src: url('/src/assets//webfonts/Ananda\ Personal\ Use.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Autography';
+    src: url('/src/assets//webfonts/Autography.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Belinda Carolyne';
+    src: url('/src/assets//webfonts/Belinda\ Carolyne\ TTF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BirdsOfParadise';
+    src: url('/src/assets//webfonts/Birds\ of\ Paradise\ +\ PERSONAL\ USE\ ONLY.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bostante';
+    src: url('/src/assets//webfonts/Bostante.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BrittanySignature';
+    src: url('/src/assets//webfonts/BrittanySignature.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BuffaloInline2Grunge';
+    src: url('/src/assets//webfonts/BuffaloInline2Grunge.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'chemistry';
+    src: url('/src/assets//webfonts/chemistry.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FeelingPassionate';
+    src: url('/src/assets//webfonts/Feeling\ Passionate.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OnestySignature';
+    src: url('/src/assets//webfonts/Onesty\ Signature.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RocketClouds';
+    src: url('/src/assets//webfonts/Rocket\ Clouds.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.button_s {
+    color: var(--color-white) !important;
+    background: transparent !important;
+    border: 2px solid var(--color-sec) !important;
+    padding: 12px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.button_s:hover, .button_mainn:hover 
+{
+	text-decoration: none;
+	background: #FF1744;
+	color: #fefefe;
+	-webkit-box-shadow: 2px 2px 20px rgba(255, 23, 68,0.7);
+	box-shadow: 2px 2px 20px rgba(255, 23, 68,0.7);
+}
+
+
+.counter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff1744;
+    border-radius: 5px;
+    width: 125px;
+    height: 47px;
+}
+.counter-button {
+    background-color: #181818;
+    border: 1px solid #181818;
+    border-radius: 5px;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.button_mainn {
+    color: var(--color-white) !important;
+    background: #ff1744 !important;
+    border: 2px solid var(--color-sec) !important;
+    padding: 20px 77px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+/* MultiColor */
+
+ .dyn_bdy2 {
+    background-color: #181818;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.overlay-texts-white2 {
+    position: absolute;
+    top: 60px;
+    margin-left: 20px;
+    /* color: #fff ; */
+    width: 90%;
+    font-size: 42px;
+    font-family: Arial, sans-serif;
+    padding: 3px;
+    text-align: center;
+    letter-spacing: 2.4px;
+    animation: colorChange2 5s infinite;
+    text-shadow: 0 0 8px rgb(255, 0, 205);
+}
+
+@keyframes colorChange2 {
+    0% { color: red; } /* Initial color */
+    25% { color: pink; } 
+    50% { color: blue;  } /* Intermediate color */
+    75% { color: rgb(0, 255, 85); } 
+    100% { color: yellow;  } /* Final color, same as initial */
+  }
+
+ .Design-Neon .form-color textarea{
+    background: #020202;
+    border: 2px solid transparent;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    color: #FEFEFE;
+  }
+
+  .Design-Neon .form-color textarea::placeholder{
+    color: #c0c0c0;
+  }
+
+  .Design-Neon .form-color textarea:active,   .Design-Neon .form-color textarea:focus{
+    border-color: #FF1744;
+    border: 2px solid #FF1744;
+    outline: none;
+    box-shadow: none;
+  }
+
+.input-color input{
+    background: #020202;
+    border: 2px solid transparent;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    color: #FEFEFE;
+}
+
+/* SingleColor */
+
+.circle-red {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: red;
+    border-color: rgb(0, 0, 0);
+    text-shadow: 0 0 5px red;
+}
+
+.circle-pink {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(255, 0, 238);
+    border-color: rgb(0, 0, 0);
+}
+
+.circle-green {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(34, 255, 0);
+    border-color: rgb(0, 0, 0);
+}
+
+.circle-blue {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(0, 17, 255);
+    border-color: rgb(0, 0, 0);
+}
+
+.circle-purple {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(204, 0, 255);
+    border-color: rgb(0, 0, 0);
+}
+
+.circle-orange {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(255, 106, 0);
+    border-color: rgb(0, 0, 0);
+}
+
+.circle-white {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(255, 255, 255);
+    border-color: #000000;
+}
+
+.circle-yellow {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(251, 255, 0);
+    border-color: rgb(0, 0, 0);
+}
+
+.circle-iceblue {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: #00bfff;
+    border-color: rgb(0, 0, 0);
+}
+
+.circle-warmwhite {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: #f3e7d3;
+    border-color: rgb(0, 0, 0);
+}
+
+.overlay-texts-white3 {
+    position: absolute;
+    top: 60px;
+    margin-left: 20px;
+    color: #fff !important;
+    width: 90%;
+    font-size: 42px;
+    font-family: Arial, sans-serif;
+    padding: 3px;
+    text-align: center;
+    letter-spacing: 2.4px;
+    /* animation: colorChange2 5s infinite; */
+    text-shadow: 0 0 8px rgb(255, 0, 205);
+}
+
+.active {
+    border: 2px solid white !important; 
+  }

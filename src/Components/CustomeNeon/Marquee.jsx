@@ -19,7 +19,7 @@ const Marquee = () => {
                 className="marquee1"
                 style={{marginTop: "20px"}}
               >
-                <a href="/contactus">
+                <a href="/contactus" >
                   <span className="text-glow">
                     For more customization please contact to us on single click.
                   </span>

@@ -7,7 +7,7 @@ import NeonDesign from "../../Components/CustomeNeon/NeonDesign";
 const CustomNeonFloro = () => {
   return (
     <div>
-      <AboutBanner head="LED Board" sub_head="LED Board" />
+      <AboutBanner head="Neon Customization" sub_head="Customization" />
       <Marquee/>
       <NeonDesign/>
       <CreativeConcept />
