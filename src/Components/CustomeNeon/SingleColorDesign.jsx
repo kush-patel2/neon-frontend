@@ -1,9 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../assets/css/customizesign.css'
 
 import { FaAngleRight } from "react-icons/fa";
+import { handleBackboardButtonClick, handleColorButtonClick, handleFontButtonClick, handleSizeButtonClick } from '../../Functions/CustomdesignFunc';
 
 const SingleColorDesign = () => {
+  const [customStyle, setCustomStyle] = useState({fontSize: "25px", fontFamily: "Algerian", boxShadow: "none", color:"white"})
+  const [customText, setCustomText] = useState("Text Show");
+
+  const [activeSizeButton, setActiveSizeButton] = useState('small');
+  const [activeFontButton, setActiveFontButton] = useState('Algerian');
+  const [activeBackboardButton, setActiveBackboardButton] = useState('none');
+  const [activeColorButton, setActiveColorButton] = useState('white');
+
+  const handleSizeClick = handleSizeButtonClick(setCustomStyle, setActiveSizeButton);
+  const handleFontClick = handleFontButtonClick(setCustomStyle, setActiveFontButton);
+  const handleBackboardClick = handleBackboardButtonClick(setCustomStyle, setActiveBackboardButton);
+  const handleColorClick = handleColorButtonClick(setCustomStyle, setActiveColorButton);
+
+
+
+  const [qty, setQty] = useState(1);
+  const increment = () => {
+    if(qty<10){
+      setQty(qty+1);
+    }
+  }
+  const decrement = () => {
+    if(qty>1){
+      setQty(qty-1);
+    }
+  }
   return (
     <div>
       <section id="Design-Neon" className="Design-Neon pt-0">
@@ -21,9 +48,9 @@ const SingleColorDesign = () => {
                   <div
                     id="myDIVTag"
                     className="overlay-texts-white3"
-                    style={{fontSize: "25px", fontFamily: "Algerian"}}
+                    style={customStyle}
                   >
-                    Text Show
+                    {customText}
                   </div>
                 </div>
               </div>
@@ -81,7 +108,7 @@ const SingleColorDesign = () => {
                         onkeyup="calculate()"
                         className="form-control mt-2"
                         placeholder="Text Show"
-                        required=""
+                        onChange={(e)=>{setCustomText(e.target.value)}}
                       ></textarea>
                     </div>
                   </div>
@@ -95,32 +122,32 @@ const SingleColorDesign = () => {
 
                   <div className="row mt-1">
                     <div className="col-md-4 align-self-center">
-                      <button
+                    <button
                         type="button"
-                        className="button_main btn font-size-btn active w-75"
                         data-size="1"
                         id="btnsmall"
-                        onclick="document.getElementById('myDIVTag').style.fontSize ='25px';updateButton(1)}"
+                        className={`button_main btn font-size-btn w-75 ${activeSizeButton === 'small' ? 'active' : ''}`}
+                        onClick={() => handleSizeClick('25px', 'small')}
                       >
                         Small
                       </button>
                     </div>
                     <div className="col-md-4 align-self-center">
-                      <button
+                    <button
                         type="button"
-                        className="button_main btn inactive font-size-btn w-75"
+                        className={`button_main btn font-size-btn w-75 ${activeSizeButton === 'medium' ? 'active' : ''}`}
                         data-size="2"
-                        onclick="document.getElementById('myDIVTag').style.fontSize ='32px';updateButton(2)"
+                        onClick={() => handleSizeClick('32px', 'medium')}
                       >
                         Medium
                       </button>
                     </div>
                     <div className="col-md-4 align-self-center">
-                      <button
+                    <button
                         type="button"
-                        className="button_main btn inactive font-size-btn w-75 "
+                        className={`button_main btn font-size-btn w-75 ${activeSizeButton === 'large' ? 'active' : ''}`}
                         data-size="3"
-                        onclick="document.getElementById('myDIVTag').style.fontSize ='40px';updateButton(3)"
+                        onClick={() => handleSizeClick('40px', 'large')}
                       >
                         Large
                       </button>
@@ -135,28 +162,28 @@ const SingleColorDesign = () => {
 
                   <div className="row mt-1 center-block">
                     <div className="col-md-12 align-self-center">
-                      <button
+                    <button
                         type="button"
-                        className="button_mains btn active"
+                        className={`button_mains btn ${activeFontButton === 'AlexaStdRegular' ? 'active' : ''}`}
                         id="btnfont1"
                         style={{fontFamily:'AlexaStdRegular'}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily = 'AlexastyleRegular'"
-                      >
+                        onClick={() => handleFontClick('AlexaStdRegular', 'AlexaStdRegular')}
+                        >    
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'AlluraRegular' ? 'active' : ''}`}
                         style={{fontFamily:"AlluraRegular"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='AlluraRegular'"
+                        onClick={() => handleFontClick('AlluraRegular', 'AlluraRegular')}
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'AnandaBlackPersonal' ? 'active' : ''}`}
                         style={{fontFamily:"AnandaBlackPersonal"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='AnandaBlackPersonal'"
+                        onClick={() => handleFontClick('AnandaBlackPersonal', 'AnandaBlackPersonal')}
                       >
                         ABC
                       </button>
@@ -164,27 +191,28 @@ const SingleColorDesign = () => {
                   </div>
                   <div className="row mt-1">
                     <div className="col-md-12 align-self-center">
-                      <button
+                    <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'AnandaPersonal' ? 'active' : ''}`}
                         style={{fontFamily:"AnandaPersonal"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='AnandaPersonal'"
+                        onClick={() => handleFontClick('AnandaPersonal', 'AnandaPersonal')}
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'Autography' ? 'active' : ''}`}
                         style={{fontFamily:"Autography"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='AutographyDOLnW'"
+                        onClick={() => handleFontClick('Autography', 'Autography')}
+
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'Belinda Carolyne' ? 'active' : ''}`}
                         style={{fontFamily:"Belinda Carolyne"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='BelindaCarolynex3n8R'"
+                        onClick={() => handleFontClick('Belinda Carolyne', 'Belinda Carolyne')}
                       >
                         ABC
                       </button>
@@ -192,27 +220,27 @@ const SingleColorDesign = () => {
                   </div>
                   <div className="row mt-1">
                     <div className="col-md-12 align-self-center">
-                      <button
+                    <button
                         type="button"
-                        className="button_mains btn"
-                        style={{fontFamily:"BirdsOfParadise"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='BirdsOfParadisePersonalUseOnly'"
+                        className={`button_mains btn ${activeFontButton === 'BirdsOfParadise' ? 'active' : ''}`}
+                        style={{ fontFamily: "BirdsOfParadise" }}
+                        onClick={() => handleFontClick('BirdsOfParadise', 'BirdsOfParadise')}
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
-                        style={{fontFamily:"Bostante"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='Bostante'"
+                        className={`button_mains btn ${activeFontButton === 'Bostante' ? 'active' : ''}`}
+                        style={{ fontFamily: "Bostante" }}
+                        onClick={() => handleFontClick('Bostante', 'Bostante')}
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'BrittanySignature' ? 'active' : ''}`}
                         style={{fontFamily:"BrittanySignature"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='BrittanySignature'"
+                        onClick={() => handleFontClick('BrittanySignature', 'BrittanySignature')}
                       >
                         ABC
                       </button>
@@ -220,27 +248,27 @@ const SingleColorDesign = () => {
                   </div>
                   <div className="row mt-1">
                     <div className="col-md-12 align-self-center">
-                      <button
+                    <button
                         type="button"
-                        className="button_mains btn"
-                        style={{fontFamily:"BuffaloItalic"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='BuffaloItalic'"
+                        className={`button_mains btn ${activeFontButton === 'Algerian' ? 'active' : ''}`}
+                        style={{fontFamily:"Algerian"}}
+                        onClick={() => handleFontClick('Algerian', 'Algerian')}
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'BuffaloItalic1' ? 'active' : ''}`}
                         style={{fontFamily:"BuffaloItalic1"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='BuffaloItalic1'"
+                        onClick={() => handleFontClick('BuffaloItalic1', 'BuffaloItalic1')}
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'BuffaloInline2Grunge' ? 'active' : ''}`}
                         style={{fontFamily:"BuffaloInline2Grunge"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='Buffalo'"
+                        onClick={() => handleFontClick('BuffaloInline2Grunge', 'BuffaloInline2Grunge')}
                       >
                         ABC
                       </button>
@@ -248,27 +276,27 @@ const SingleColorDesign = () => {
                   </div>
                   <div className="row mt-1">
                     <div className="col-md-12 align-self-center">
-                      <button
+                    <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'Buffalo1' ? 'active' : ''}`}
                         style={{fontFamily:"Buffalo1"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='Buffalo1'"
+                        onClick={() => handleFontClick('Buffalo1', 'Buffalo1')}
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'chemistry' ? 'active' : ''}`}
                         style={{fontFamily:"chemistry"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='ChemistryEa8re'"
+                        onClick={() => handleFontClick('chemistry', 'chemistry')}
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'DancingScript3j68' ? 'active' : ''}`}
                         style={{fontFamily:"DancingScript3j68"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='DancingScript3j68'"
+                        onClick={() => handleFontClick('DancingScript3j68', 'DancingScript3j68')}
                       >
                         ABC
                       </button>
@@ -276,27 +304,27 @@ const SingleColorDesign = () => {
                   </div>
                   <div className="row mt-1">
                     <div className="col-md-12 align-self-center">
-                      <button
+                    <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'Dancingscriptot' ? 'active' : ''}`}
                         style={{fontFamily:"Dancingscriptot"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='Dancingscriptot'"
+                        onClick={() => handleFontClick('Dancingscriptot', 'Dancingscriptot')}
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'DancingTimeDemoRegular' ? 'active' : ''}`}
                         style={{fontFamily:"DancingTimeDemoRegular"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='DancingTimeDemoRegular'"
+                        onClick={() => handleFontClick('DancingTimeDemoRegular', 'DancingTimeDemoRegular')}
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'Daytonica' ? 'active' : ''}`}
                         style={{fontFamily:"Daytonica"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='Daytonica'"
+                        onClick={() => handleFontClick('Daytonica', 'Daytonica')}
                       >
                         ABC
                       </button>
@@ -304,27 +332,27 @@ const SingleColorDesign = () => {
                   </div>
                   <div className="row mt-1">
                     <div className="col-md-12 align-self-center">
-                      <button
+                    <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'FeelingPassionate' ? 'active' : ''}`}
                         style={{fontFamily:"FeelingPassionate"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='FeelingPassionate'"
+                        onClick={() => handleFontClick('FeelingPassionate', 'FeelingPassionate')}
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'GreatVibesRegular' ? 'active' : ''}`}
                         style={{fontFamily:"GreatVibesRegular"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='GreatVibesRegular'"
+                        onClick={() => handleFontClick('GreatVibesRegular', 'GreatVibesRegular')}
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'Neoneon' ? 'active' : ''}`}
                         style={{fontFamily:"Neoneon"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='Neoneon'"
+                        onClick={() => handleFontClick('Neoneon', 'Neoneon')}
                       >
                         ABC
                       </button>
@@ -332,27 +360,27 @@ const SingleColorDesign = () => {
                   </div>
                   <div className="row mt-1">
                     <div className="col-md-12 align-self-center">
-                      <button
+                    <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'OnestySignature' ? 'active' : ''}`}
                         style={{fontFamily:"OnestySignature"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='OnestySignature'"
+                        onClick={() => handleFontClick('OnestySignature', 'OnestySignature')}
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
-                        style={{fontFamily:"OnestySignature"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='OnestySignature'"
+                        className={`button_mains btn ${activeFontButton === 'OnestySignature1' ? 'active' : ''}`}
+                        style={{fontFamily:"OnestySignature1"}}
+                        onClick={() => handleFontClick('OnestySignature1', 'OnestySignature1')}
                       >
                         ABC
                       </button>
                       <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'pirulenrg' ? 'active' : ''}`}
                         style={{fontFamily:"pirulenrg"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='pirulenrg'"
+                        onClick={() => handleFontClick('pirulenrg', 'pirulenrg')}
                       >
                         ABC
                       </button>
@@ -360,36 +388,86 @@ const SingleColorDesign = () => {
                   </div>
                   <div className="row mt-1">
                     <div className="col-md-12 align-self-center">
-                      <button
+                    <button
                         type="button"
-                        className="button_mains btn"
+                        className={`button_mains btn ${activeFontButton === 'RocketClouds' ? 'active' : ''}`}
                         style={{fontFamily:"RocketClouds"}}
-                        onclick="document.getElementById('myDIVTag').style.fontFamily ='RocketClouds'"
+                        onClick={() => handleFontClick('RocketClouds', 'RocketClouds')}
                       >
                         ABC
                       </button>
                     </div>
                   </div>
 
-                  <div class="row mt-3">
-                            <div class="col-md-12 align-self-center">
+                  <div className="row mt-3">
+                            <div className="col-md-12 align-self-center">
                                 <label for="myInputText">Select Your Color</label>
                             </div>
                         </div>
 
-                        <div class="row mt-1">
-                            <div class="col-md-12 align-self-center">
+                        <div className="row mt-1">
+                            <div className="col-md-12 align-self-center">
 
-                                <button type="button" class="circle-red colors me-2" onclick="document.getElementById('myDIVTag').style.color ='red';document.getElementById('myDIVTag').style.textShadow='0 0 5px red'"></button>
-                                <button type="button" class="circle-pink colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(255, 0, 238)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #FF00EE'"></button>
-                                <button type="button" class="circle-green colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(34, 255, 0)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #22FF00'"></button>
-                                <button type="button" class="circle-blue colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(0, 17, 255)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #0011FF'"></button>
-                                <button type="button" class="circle-purple colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(204, 0, 255)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #CC00FF'"></button>
-                                <button type="button" class="circle-orange colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(255, 106, 0)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #FF6A00'"></button>
-                                <button type="button" class="circle-white colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(255, 255, 255)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #FFFFFF'"></button>
-                                <button type="button" class="circle-yellow colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(251, 255, 0)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #FBFF00'"></button>
-                                <button type="button" class="circle-iceblue colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(0, 191, 255)';document.getElementById('myDIVTag').style.textShadow='0 0 5px 	#00bfff'"></button>
-                                <button type="button" class="circle-warmwhite colors me-2" onclick="document.getElementById('myDIVTag').style.color ='rgb(243, 231, 211)';document.getElementById('myDIVTag').style.textShadow='0 0 5px #f3e7d3'"></button>
+                                <button 
+                                type="button" 
+                                className={`circle-red colors me-2 ${activeColorButton === 'red' ? 'active' : ''}`}
+                                onClick={() => handleColorClick('red', 'red')}>
+
+                                </button>
+                                <button 
+                                type="button" 
+                                className={`circle-pink colors me-2 ${activeColorButton === 'pink' ? 'active' : ''}`}
+                                onClick={() => handleColorClick('rgb(255, 0, 238)', 'pink')}>
+
+                                </button>
+                                <button 
+                                type="button" 
+                                className={`circle-green colors me-2 ${activeColorButton === 'green' ? 'active' : ''}`}
+                                onClick={() => handleColorClick('rgb(34, 255, 0)', 'green')}>
+
+                                </button>
+                                <button 
+                                type="button" 
+                                className={`circle-blue colors me-2 ${activeColorButton === 'blue' ? 'active' : ''}`}
+                                onClick={() => handleColorClick('rgb(0, 17, 255)', 'blue')}>
+
+                                </button>
+                                <button 
+                                type="button" 
+                                className={`circle-purple colors me-2 ${activeColorButton === 'purple' ? 'active' : ''}`}
+                                onClick={() => handleColorClick('rgb(204, 0, 255)', 'purple')}>
+
+                                </button>
+                                <button 
+                                type="button" 
+                                className={`circle-orange colors me-2 ${activeColorButton === 'orange' ? 'active' : ''}`}
+                                onClick={() => handleColorClick('rgb(255, 106, 0)', 'orange')}>
+
+                                </button>
+                                <button 
+                                type="button" 
+                                className={`circle-white colors me-2 ${activeColorButton === 'white' ? 'active' : ''}`}
+                                onClick={() => handleColorClick('rgb(255, 255, 255)', 'white')}>
+
+                                </button>
+                                <button 
+                                type="button" 
+                                className={`circle-yellow colors me-2 ${activeColorButton === 'yellow' ? 'active' : ''}`}
+                                onClick={() => handleColorClick('rgb(251, 255, 0)', 'yellow')}>
+
+                                </button>
+                                <button 
+                                type="button" 
+                                className={`circle-iceblue colors me-2 ${activeColorButton === 'iceblue' ? 'active' : ''}`} 
+                                onClick={() => handleColorClick('rgb(0, 191, 255)', 'iceblue')}>
+
+                                </button>
+                                <button 
+                                type="button" 
+                                className={`circle-warmwhite colors me-2 ${activeColorButton === 'warmwhite' ? 'active' : ''}`}
+                                onClick={() => handleColorClick('rgb(243, 231, 211)', 'warmwhite')}>
+
+                                </button>
 
                             </div>
                         </div>
@@ -404,21 +482,22 @@ const SingleColorDesign = () => {
 
                   <div className="row mt-1">
                     <div className="col-md-12 col-lg-6 col-12 align-self-center">
-                      <button
+                    <button
                         type="button"
-                        className="button_s btn inactive"
+                        className={`button_s btn ${activeBackboardButton === 'square' ? 'active' : ''}`}
                         id="btnbox1"
-                        onclick="AddBoxShadow()"
+                        
+                        onClick={() => handleBackboardClick('rgba(0, 0, 0, 0.5) 1px 1px 7px', 'square')}
                       >
                         <img src="/images/Design/box2.png" />
                       </button>
                     </div>
                     <div className="col-md-12 col-lg-6 col-12 align-self-center">
-                      <button
+                    <button
                         type="button"
-                        className="button_s btn active"
+                        className={`button_s btn ${activeBackboardButton === 'cut to letter' ? 'active' : ''}`}
                         id="btnbox2"
-                        onclick="removeBoxShadow()"
+                        onClick={() => handleBackboardClick('none', 'cut to letter')}
                       >
                         <img src="/images/Design/box1.png" />
                       </button>
@@ -452,7 +531,7 @@ const SingleColorDesign = () => {
                         <button
                           type="button"
                           className="counter-button"
-                          onclick="decrement()"
+                          onClick={()=>decrement()}
                         >
                           -
                         </button>
@@ -463,14 +542,14 @@ const SingleColorDesign = () => {
                           name="quantity"
                           min="1"
                           max="100"
-                          value="1"
+                          value={qty}
                           onchange="calculate()"
                           style={{paddingLeft: "12px"}}
                         />
                         <button
                           type="button"
                           className="counter-button"
-                          onclick="increment()"
+                          onClick={()=>increment()}
                         >
                           +
                         </button>

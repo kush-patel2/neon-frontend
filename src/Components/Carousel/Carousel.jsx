@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import "./Carousel.css";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NextArrow = (props) => {
   const { onClick } = props;
@@ -36,12 +37,20 @@ const Carousel = () => {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
   };
 
   return (
     <div className="carousel-wrapper">
         <div className="fixed-buttons">
-        <button className="contact-button">Contact Us</button>
+        <Link to="/contactus" className="contact-button">Contact Us</Link>
         <div className="social-icons">
           <FaFacebookF />
           <FaInstagram />
@@ -51,13 +60,13 @@ const Carousel = () => {
     <div className="slider-container">
       <Slider {...settings}>
         <div>
-          <img src="images/Carousel/1.jpg" alt="Slide 1" />
+          <img src="images/Carousel/1.jpg" alt="Slide 1" className="carousel-image"/>
         </div>
         <div>
-          <img src="images/Carousel/2.jpg" alt="Slide 2" />
+          <img src="images/Carousel/2.jpg" alt="Slide 2" className="carousel-image"/>
         </div>
         <div>
-          <img src="images/Carousel/4.jpg" alt="Slide 3" />
+          <img src="images/Carousel/4.jpg" alt="Slide 3" className="carousel-image"/>
         </div>
       </Slider>
     </div>

@@ -6,13 +6,13 @@ const AboutBanner = (props) => {
   return (
     <div>
       <section id="cover">
-        <div class="container">
-          <div class="row pt-5 pb-5">
-            <div class="col-lg-6 align-self-center">
-              <h1 class="wrapper_head">{props.head}</h1>
-              <h5 class="wrapper_nav">
+        <div className="container">
+          <div className="row pt-5 pb-5">
+            <div className="col-lg-6 align-self-center">
+              <h1 className="wrapper_head">{props.head}</h1>
+              <h5 className="wrapper_nav">
                 <span>
-                  <Link to="/" class="wrapper_nav_link">
+                  <Link to="/" className="wrapper_nav_link">
                     Home
                   </Link>
                 </span>

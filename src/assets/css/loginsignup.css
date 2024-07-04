@@ -25,7 +25,7 @@
 }
 
 .gradient-custom .sign-in-form form input {
-    background-color: #020202;
+    background-color: #020202 !important;
     font-size: 16px !important;
     border: 2px solid transparent;
     -webkit-transition: 0.5s;
@@ -35,7 +35,39 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px;
-    color: var(--color-white);
+    color: var(--color-white) !important;
+}
+
+.gradient-custom .sign-in-form form .form-control {
+    background-color: #020202 !important;
+    font-size: 16px !important;
+    border: 2px solid transparent;
+    transition: 0.5s;
+    border-radius: 5px;
+    color: var(--color-white) !important;
+}
+.gradient-custom .sign-in-form form .form-control:focus {
+    border-color: red !important;
+    box-shadow: none; /* Optionally, remove the default focus shadow */
+}
+/* Handle autofill background and text color */
+.gradient-custom .sign-in-form form .form-control:-webkit-autofill {
+    background-color: #020202 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #020202 inset;
+    box-shadow: 0 0 0px 1000px #020202 inset;
+    color: var(--color-white) !important;
+}
+/* Ensure font color remains white even after autofill */
+.gradient-custom .sign-in-form form .form-control:-webkit-autofill::first-line {
+    color: var(--color-white) !important;
+}
+
+/* Ensure background color stays consistent */
+.gradient-custom .sign-in-form form .form-control:-webkit-autofill:focus {
+    border-color: red !important;
+    -webkit-box-shadow: 0 0 0px 1000px #020202 inset;
+    box-shadow: 0 0 0px 1000px #020202 inset;
+    color: var(--color-white) !important;
 }
 
 input {

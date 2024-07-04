@@ -419,7 +419,7 @@ body{
     position: absolute;
     top: 60px;
     margin-left: 20px;
-    color: #fff !important;
+    /* color: #fff !important; */
     width: 90%;
     font-size: 42px;
     font-family: Arial, sans-serif;
@@ -432,4 +432,41 @@ body{
 
 .active {
     border: 2px solid white !important; 
+  }
+
+
+  @media (max-width: 425px){
+    .button_main{
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        font-size: 12px;
+        height: 50px;
+        width: 100px !important;
+        margin-right: 20px;
+    }
+    .button_s{
+        margin-bottom: 10px;
+        
+    }
+    .button_mains{
+        
+        padding: 10px 20px;
+        font-size: 12px;
+        height: 50px;
+        width: 100px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width:375px){
+    .button_mains{
+        
+        padding: 5px 0px;
+        font-size: 8px;
+        height: 50px;
+        width: 80px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
   }

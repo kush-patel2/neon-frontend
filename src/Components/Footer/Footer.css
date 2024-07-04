@@ -1,5 +1,8 @@
 .ftr_btm {
     background-color: #000 !important;
+    padding-top: 15px; /* Add padding to top for space */
+    padding-bottom: 15px; /* Add padding to bottom for space */
+
 }
 
 .row {
@@ -7,8 +10,8 @@
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    /* margin-right: -15px;
+    margin-left: -15px; */
 }
 
 .copyright .copyright-left {
@@ -26,9 +29,26 @@
 .ftr_btm h6 {
     background: #000;
     margin-bottom: 0 !important;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.5) !important;
 }
+
+@media (max-width: 767.98px) {
+    .copyright {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .copyright-left,
+    .copyright-right {
+      text-align: center;
+      margin-bottom: 5px; /* Add margin bottom for spacing */
+    }
+  
+    .ftr_btm h6 {
+      font-size: 14px; /* Further reduce font size for smaller screens */
+    }
+  }

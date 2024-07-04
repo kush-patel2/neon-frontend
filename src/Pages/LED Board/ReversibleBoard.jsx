@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CreativeConcept from '../../Components/HomeComponents/CreativeConcept'
 import AboutBanner from '../../Components/AboutusComponents/AboutBanner'
 import ImagesSection from '../../Components/LED Board/ImagesSection'
 
 const ReversibleBoard = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page when the component mounts
+  }, []);
     let images =[
         {
             image: "images/LED/Reversible/1.png"
@@ -25,8 +28,8 @@ const ReversibleBoard = () => {
     <div>
       <AboutBanner head="Reversible Board" sub_head="Reversible Board" />
       <ImagesSection
-        head="Back Light Board"
-        sub_head="Back Light Board"
+        head="Reversible Board"
+        sub_head="Reversible Board"
         images={images}
       />
       <CreativeConcept />

@@ -22,6 +22,8 @@ import Gallery from './Pages/Gallery/Gallery';
 import CustomNeonFloro from './Pages/CustomizeSigns/CustomNeonFloro';
 import CustomMultiColor from './Pages/CustomizeSigns/CustomMultiColor';
 import CustomSingleColor from './Pages/CustomizeSigns/CustomSingleColor';
+import GotoTopButton from './Components/GoToTop/GotoTopButton';
+import WhatsappButton from './Components/WhatsAppButton/WhatsappButton';
 
 function App() {
   return (
@@ -48,6 +50,8 @@ function App() {
         <Route path="/custom-multicolor" element={ <CustomMultiColor/>}/>
         <Route path="/custom-singlecolor" element={ <CustomSingleColor/>}/>
       </Routes>
+      <WhatsappButton/>
+      <GotoTopButton/>
       <Footer/>
    
       

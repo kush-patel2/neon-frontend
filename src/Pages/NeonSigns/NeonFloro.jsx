@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AboutBanner from '../../Components/AboutusComponents/AboutBanner'
 import CreativeConcept from '../../Components/HomeComponents/CreativeConcept'
 import NeonDesc from '../../Components/NeonSignComponents/NeonDesc'
 
 const NeonFloro = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page when the component mounts
+  }, []);
    const  links = [
         {
             link: "https://www.youtube.com/embed/_MvYm9AKBTQ?autoplay=0&amp;loop=1&amp;playlist=_MvYm9AKBTQ"

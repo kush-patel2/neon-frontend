@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import '../../assets/css/loginsignup.css'
 
 const Login = ({ signup, setSignup }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <div>
       <section className="gradient-custom">
@@ -29,7 +31,8 @@ const Login = ({ signup, setSignup }) => {
                           placeholder="Email Address"
                           required
                           type="text"
-                          value=""
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                         />
                       </div>
                       <div className="form-group">
@@ -41,14 +44,18 @@ const Login = ({ signup, setSignup }) => {
                           placeholder="Password"
                           required
                           type="password"
-                          value=""
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
                         />
                       </div>
                       <div className="form-group ">
                         <input
                           className="show-pwd mt-2"
                           type="checkbox"
-                          onclick="showPassword()"
+                          onClick={() => {
+                            const pwdField = document.getElementById('txtpwd');
+                            pwdField.type = pwdField.type === 'password' ? 'text' : 'password';
+                          }}
                         />
                         <label> Show Password</label>
                       </div>

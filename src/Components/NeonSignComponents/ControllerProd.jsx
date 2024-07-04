@@ -1,21 +1,14 @@
 import React from 'react'
 import '../../assets/css/neonsign.css'
 import { FaAngleRight } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const ControllerProd = () => {
   return (
     <div>
       <section id="news">
         <div className="container">
-          {/* <div className="row">
-            <div className="col-lg-6 col-md-12 cnt_head mb-5">
-              <span className="sub_head"></span>
-              <h2 className="s_head"></h2>
-              <p className="h_body">
-                
-              </p>
-            </div>
-          </div> */}
+          
           <div className="row flex-lg-row flex-column">
             <div className="col-lg-4 col-md-6 col-sm-12 bl_sec mb-3 d-flex align-items-stretch">
               <div className="card d-flex flex-column">
@@ -52,8 +45,8 @@ const ControllerProd = () => {
                     className="pr_lnk"
                     style={{height: "100%", minHeight: "47px"}}
                   >
-                    <a
-                      href="/neongo"
+                    <a as={Link}
+                      to="/neongo"
                       className="button_mai"
                     >
                       Add To Cart&nbsp;&nbsp;&nbsp;

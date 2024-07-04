@@ -4,11 +4,11 @@ import "../../../assets/css/aboutneon.css"
 const AboutNeon = () => {
   return (
     <>
-    <section id="introduction" class="about_wrapper">
-    <div class="container">
-      <div class="row flex-lg-row flex-column justify-content-center">
+    <section id="introduction" className="about_wrapper">
+    <div className="container">
+      <div className="row flex-lg-row flex-column justify-content-center">
        
-        <div class="col-lg-6 text-center text-lg-start">
+        <div className="col-lg-6 text-center text-lg-start">
           <h6 className='sub_head'>Shine on with FloRo!</h6>
           <h3 className='s_head'>About Neon FloRO</h3>
           <p className='h_body'>Neon FloRo is more than just a lighting solution - it's a statement piece that adds personality and character to any space, whether it's a commercial establishment, a home, or a special event.</p>
@@ -17,12 +17,13 @@ const AboutNeon = () => {
           </p>
           
         </div>
-        <div class="col-lg-6 mb-4 mb-lg-0 ps-lg-4 text-center">
-          {/* <!-- <img src="images/about/images2.jpg" class="img-fluid" alt="about"> --> */}
-
-          <iframe width="560" height="315"
+        <div className="col-lg-6 mb-4 mb-lg-0 ps-lg-4 text-center">
+          {/* <!-- <img src="images/about/images2.jpg" className="img-fluid" alt="about"> --> */}
+          <div className="iframe-container">
+          <iframe width="560" height="315" title='About Neon Video'
             src="https://www.youtube.com/embed/_MvYm9AKBTQ?autoplay=0&loop=1&playlist=_MvYm9AKBTQ">
             </iframe>
+          </div>
         </div>
 
       </div>

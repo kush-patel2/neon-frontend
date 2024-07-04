@@ -62,7 +62,7 @@ const ImgGallery = () => {
   return (
     <>
       <section id="project_detail">
-        <div class="container ">
+        <div className="container ">
           <div className="gallery-container">
             {images.map((image, index) => (
               <div className="gallery-item" key={index}>

@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import '../../assets/css/loginsignup.css'
 
 const SignupPage = ({ signup, setSignup }) => {
+  // const [formData, setFormData] = useState({
+  //   firstName: "",
+  //   lastName: "",
+  //   phone: "",
+  //   email: "",
+  //   password: "",
+  //   confirmPassword: ""
+  // });
+  const [firstName , setFirstName] = useState("");
+  const [lastName , setLastName] = useState("");
+  const [phone , setPhone] = useState("");
+  const [email , setEmail] = useState("");
+  const [password , setPassword] = useState("");
+  const [confirmPassword , setConfirmPassword] = useState("");
+
+
+  // const handleChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value
+  //   });
+  // };
   return (
     <div>
       <section className="gradient-custom">
@@ -32,7 +54,8 @@ const SignupPage = ({ signup, setSignup }) => {
                               placeholder="First Name"
                               required
                               type="text"
-                              value=""
+                              value={firstName}
+                              onChange={(e)=> setFirstName(e.target.value)}
                             />
                           </div>
                         </div>
@@ -46,7 +69,8 @@ const SignupPage = ({ signup, setSignup }) => {
                               placeholder="Last Name"
                               required
                               type="text"
-                              value=""
+                              value={lastName}
+                              onChange={(e)=> setLastName(e.target.value)}
                             />
                           </div>
                         </div>
@@ -60,7 +84,8 @@ const SignupPage = ({ signup, setSignup }) => {
                               placeholder="Phone Number"
                               required
                               type="text"
-                              value=""
+                              value={phone}
+                              onChange={(e) => setPhone(e.target.value)}
                             />
                           </div>
                         </div>
@@ -74,7 +99,8 @@ const SignupPage = ({ signup, setSignup }) => {
                               placeholder="Email address"
                               required
                               type="text"
-                              value=""
+                              value={email}
+                              onChange={(e)=> setEmail(e.target.value)}
                             />
                           </div>
                         </div>
@@ -88,7 +114,8 @@ const SignupPage = ({ signup, setSignup }) => {
                               name="Password"
                               placeholder="Password"
                               required
-                              value=""
+                              value={password}
+                              onChange={(e)=> setPassword(e.target.value)}
                             />
                           </div>
                         </div>
@@ -102,7 +129,8 @@ const SignupPage = ({ signup, setSignup }) => {
                               name="ConfirmPassword"
                               placeholder="Re-enter Password"
                               required
-                              value=""
+                              value={confirmPassword}
+                              onChange={(e)=> setConfirmPassword(e.target.value)}
                             />
                           </div>
                         </div>

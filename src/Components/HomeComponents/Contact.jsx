@@ -7,25 +7,25 @@ const Contact = () => {
   return (
     <div>
       <section id="contact">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 cnt_head align-self-center">
-              <span class="sub_head">Feel free to contact us</span>
-              <h2 class="s_head">Contact Us</h2>
-              <p class="h_body">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 cnt_head align-self-center">
+              <span className="sub_head">Feel free to contact us</span>
+              <h2 className="s_head">Contact Us</h2>
+              <p className="h_body">
                 If you need to help with our services, have questions about our
                 work or experiencing any technical difficulties, please do not
                 hesitate to contact us.
               </p>
-              <div class="cntc_info d-flex flex-row flex-wrap">
-                <div class="cntc_info_e">
-                  <div class="cntc_info_head">
+              <div className="cntc_info d-flex flex-row flex-wrap">
+                <div className="cntc_info_e">
+                  <div className="cntc_info_head">
                     <span>
                     <FaLocationDot />&nbsp;&nbsp;Address
                     </span>
                     <br />
                   </div>
-                  <span class="cntc_info_b">
+                  <span className="cntc_info_b">
                     {" "}
                     Krishna Electricals,
                     <br />
@@ -33,29 +33,29 @@ const Contact = () => {
                     Vadodara, Gujarat 390001
                   </span>
                 </div>
-                <div class="cntc_info_e">
-                  <div class="cntc_info_head">
+                <div className="cntc_info_e">
+                  <div className="cntc_info_head">
                     <span>
                     <FaPhone />&nbsp;&nbsp;Phone
                     </span>
                     <br />
                   </div>
-                  <span class="cntc_info_b">
+                  <span className="cntc_info_b">
                     <a href="tel:9724467687" style={{color: "#acacac", textDecoration:"none"}}>
                       +91 9724467687
                     </a>
                   </span>
                   <br />
-                  {/* <!--<span class="cntc_info_b"><a href="tel:0987654321" style="color: #acacac;">+91098 7654 321</a></span>--> */}
+                  {/* <!--<span className="cntc_info_b"><a href="tel:0987654321" style="color: #acacac;">+91098 7654 321</a></span>--> */}
                 </div>
-                <div class="cntc_info_e">
-                  <div class="cntc_info_head">
+                <div className="cntc_info_e">
+                  <div className="cntc_info_head">
                     <span>
                     <MdEmail />&nbsp;&nbsp;Email
                     </span>
                     <br />
                   </div>
-                  <span class="cntc_info_b">
+                  <span className="cntc_info_b">
                     <a
                       href="mailto: bhagyesh.sheth@gmail.com"
                       style={{color: "#acacac", textDecoration:"none"}}
@@ -67,7 +67,7 @@ const Contact = () => {
               </div>
             </div>
             <div
-              class="col-xl-6 col-lg-6 col-md-12 col-sm-12 cntc_form align-self-center"
+              className="col-xl-6 col-lg-6 col-md-12 col-sm-12 cntc_form align-self-center"
               id="Design-Your-Neon"
             >
               <iframe

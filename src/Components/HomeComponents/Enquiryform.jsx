@@ -4,11 +4,11 @@ const Enquiryform = () => {
   return (
     <div>
       <section id="Design-Your-Neon">
-        <div class="container dyn_bdy" id="validationDiv">
-          <div class="row" id="form-contact">
-            <div class="col-md-12 cntc_form align-self-center">
-              <span class="sub_head">Fill to Create Your Custom Lights</span>
-              <h2 class="s_head">Product Inquiry</h2>
+        <div className="container dyn_bdy" id="validationDiv">
+          <div className="row" id="form-contact">
+            <div className="col-md-12 cntc_form align-self-center">
+              <span className="sub_head">Fill to Create Your Custom Lights</span>
+              <h2 className="s_head">Product Inquiry</h2>
 
               <form
                 action=""
@@ -23,13 +23,13 @@ const Enquiryform = () => {
                   type="hidden"
                   value="IGfyu3Y5ES4xC646HDUqF9DkAhgORbWrAx7y0x0Rf9F_f9xG1rNoHjMCW_FPutLvJNFhGZ0bX4OTcfg6VRyvNBlZ3-lSeIGhBBxfRfjhRwQ1"
                 />{" "}
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <label className="mb-1">Name*</label>
 
                       <input
-                        class="form-control"
+                        className="form-control"
                         data-error="Please enter your name"
                         data-val="true"
                         data-val-required="Please enter name."
@@ -41,16 +41,16 @@ const Enquiryform = () => {
                       />
                     </div>
                     <span
-                      class="field-validation-valid"
+                      className="field-validation-valid"
                       data-valmsg-for="Name"
                       data-valmsg-replace="true"
                     ></span>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <label className="mb-1">Email*</label>
                       <input
-                        class="form-control"
+                        className="form-control"
                         data-val="true"
                         data-val-regex="Please enter a valid email address."
                         data-val-regex-pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
@@ -63,18 +63,18 @@ const Enquiryform = () => {
                       />
                     </div>
                     <span
-                      class="field-validation-valid"
+                      className="field-validation-valid"
                       data-valmsg-for="Email"
                       data-valmsg-replace="true"
                     ></span>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <label className="mb-1 mt-2">Mobile*</label>
                       <input
-                        class="form-control"
+                        className="form-control"
                         data-val="true"
                         data-val-regex="Please enter a valid mobile number."
                         data-val-regex-pattern="^[0-9]{10}$"
@@ -87,16 +87,16 @@ const Enquiryform = () => {
                       />
                     </div>
                     <span
-                      class="field-validation-valid"
+                      className="field-validation-valid"
                       data-valmsg-for="Mobile"
                       data-valmsg-replace="true"
                     ></span>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <label className="mb-1 mt-2">Select Product</label>
                       <select
-                        class="form-control select2 Dropdowncolor"
+                        className="form-control select2 Dropdowncolor"
                         data-val="true"
                         data-val-required="The ProductId field is required."
                         id="ddlProduct"
@@ -115,16 +115,16 @@ const Enquiryform = () => {
                       </select>
                     </div>
                     <span
-                      class="field-validation-valid"
+                      className="field-validation-valid"
                       data-valmsg-for="ProductId"
                       data-valmsg-replace="true"
                     ></span>
                   </div>
-                  <div class="col-md-12">
-                    <div class="form-group">
+                  <div className="col-md-12">
+                    <div className="form-group">
                       <label className="mb-1 mt-2">Message</label>
                       <textarea
-                        class="form-control"
+                        className="form-control"
                         cols="20"
                         data-val="true"
                         data-val-required="Please enter Message."
@@ -135,14 +135,14 @@ const Enquiryform = () => {
                       ></textarea>
                     </div>
                     <span
-                      class="field-validation-valid"
+                      className="field-validation-valid"
                       data-valmsg-for="Message"
                       data-valmsg-replace="true"
                     ></span>
                   </div>
                 </div>
-                <div class="col-md-12 text-right justify-content-end">
-                  <button type="submit" id="btnsubmit" class="button_main mt-3">
+                <div className="col-md-12 text-right justify-content-end">
+                  <button type="submit" id="btnsubmit" className="button_main mt-3">
                     Send
                   </button>
                 </div>

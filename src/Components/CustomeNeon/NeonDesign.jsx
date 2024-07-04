@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import '../../assets/css/customizesign.css'
 import { FaAngleRight } from "react-icons/fa";
+import { handleBackboardButtonClick, handleFontButtonClick, handleSizeButtonClick } from "../../Functions/CustomdesignFunc";
 
 const NeonDesign = () => {
   const [customStyle, setCustomStyle] = useState({fontSize: "25px", fontFamily: "Algerian", boxShadow: "none"})
@@ -10,20 +11,11 @@ const NeonDesign = () => {
   const [activeFontButton, setActiveFontButton] = useState('Algerian');
   const [activeBackboardButton, setActiveBackboardButton] = useState('none');
 
-  const handleSizeButtonClick = (size, buttonId) => {
-    setCustomStyle((prevStyle) => ({ ...prevStyle, fontSize: size }));
-    setActiveSizeButton(buttonId);
-  };
+  const handleSizeClick = handleSizeButtonClick(setCustomStyle, setActiveSizeButton);
+  const handleFontClick = handleFontButtonClick(setCustomStyle, setActiveFontButton);
+  const handleBackboardClick = handleBackboardButtonClick(setCustomStyle, setActiveBackboardButton);
 
-  const handleFontButtonClick = (fontFamily, buttonId) => {
-    setCustomStyle((prevStyle) => ({ ...prevStyle, fontFamily }));
-    setActiveFontButton(buttonId);
-  };
 
-  const handleBackboardButtonClick = (boxShadow, buttonId) => {
-    setCustomStyle((prevStyle) => ({ ...prevStyle, boxShadow }));
-    setActiveBackboardButton(buttonId);
-  };
 
   const [qty, setQty] = useState(1);
   const increment = () => {
@@ -119,40 +111,40 @@ const NeonDesign = () => {
                   </div>
                   <hr style={{backgroundColor: "rgb(188, 188, 188)"}} />
 
-                  <div className="row mt-3">
+                  <div className="row mt-3 justify-content-center">
                     <div className="col-md-12 align-self-center">
                       <label for="input">Pick Your Size</label>
                     </div>
                   </div>
 
                   <div className="row mt-1">
-                    <div className="col-md-4 align-self-center">
+                    <div className="col-md-4 col-xs-3 align-self-center">
                       <button
                         type="button"
                         data-size="1"
                         id="btnsmall"
-                        className={`button_main btn font-size-btn w-75 ${activeSizeButton === 'small' ? 'active' : ''}`}
-                        onClick={() => handleSizeButtonClick('25px', 'small')}
+                        className={`button_main btn font-size-btn w-100 ${activeSizeButton === 'small' ? 'active' : ''}`}
+                        onClick={() => handleSizeClick('25px', 'small')}
                       >
                         Small
                       </button>
                     </div>
-                    <div className="col-md-4 align-self-center">
+                    <div className="col-md-4 col-xs-3 align-self-center">
                       <button
                         type="button"
-                        className={`button_main btn font-size-btn w-75 ${activeSizeButton === 'medium' ? 'active' : ''}`}
+                        className={`button_main btn font-size-btn w-100 ${activeSizeButton === 'medium' ? 'active' : ''}`}
                         data-size="2"
-                        onClick={() => handleSizeButtonClick('32px', 'medium')}
+                        onClick={() => handleSizeClick('32px', 'medium')}
                       >
                         Medium
                       </button>
                     </div>
-                    <div className="col-md-4 align-self-center">
+                    <div className="col-md-4 col-xs-3 align-self-center">
                       <button
                         type="button"
-                        className={`button_main btn font-size-btn w-75 ${activeSizeButton === 'large' ? 'active' : ''}`}
+                        className={`button_main btn font-size-btn w-100 ${activeSizeButton === 'large' ? 'active' : ''}`}
                         data-size="3"
-                        onClick={() => handleSizeButtonClick('40px', 'large')}
+                        onClick={() => handleSizeClick('40px', 'large')}
                       >
                         Large
                       </button>
@@ -172,7 +164,7 @@ const NeonDesign = () => {
                         className={`button_mains btn ${activeFontButton === 'AlexaStdRegular' ? 'active' : ''}`}
                         id="btnfont1"
                         style={{fontFamily:'AlexaStdRegular'}}
-                        onClick={() => handleFontButtonClick('AlexaStdRegular', 'AlexaStdRegular')}
+                        onClick={() => handleFontClick('AlexaStdRegular', 'AlexaStdRegular')}
                         >                      
                         ABC
                       </button>
@@ -180,7 +172,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'AlluraRegular' ? 'active' : ''}`}
                         style={{fontFamily:"AlluraRegular"}}
-                        onClick={() => handleFontButtonClick('AlluraRegular', 'AlluraRegular')}
+                        onClick={() => handleFontClick('AlluraRegular', 'AlluraRegular')}
                       >
                         ABC
                       </button>
@@ -188,7 +180,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'AnandaBlackPersonal' ? 'active' : ''}`}
                         style={{fontFamily:"AnandaBlackPersonal"}}
-                        onClick={() => handleFontButtonClick('AnandaBlackPersonal', 'AnandaBlackPersonal')}
+                        onClick={() => handleFontClick('AnandaBlackPersonal', 'AnandaBlackPersonal')}
                       >
                         ABC
                       </button>
@@ -200,7 +192,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'AnandaPersonal' ? 'active' : ''}`}
                         style={{fontFamily:"AnandaPersonal"}}
-                        onClick={() => handleFontButtonClick('AnandaPersonal', 'AnandaPersonal')}
+                        onClick={() => handleFontClick('AnandaPersonal', 'AnandaPersonal')}
                       >
                         ABC
                       </button>
@@ -208,7 +200,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'Autography' ? 'active' : ''}`}
                         style={{fontFamily:"Autography"}}
-                        onClick={() => handleFontButtonClick('Autography', 'Autography')}
+                        onClick={() => handleFontClick('Autography', 'Autography')}
 
                       >
                         ABC
@@ -217,7 +209,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'Belinda Carolyne' ? 'active' : ''}`}
                         style={{fontFamily:"Belinda Carolyne"}}
-                        onClick={() => handleFontButtonClick('Belinda Carolyne', 'Belinda Carolyne')}
+                        onClick={() => handleFontClick('Belinda Carolyne', 'Belinda Carolyne')}
                       >
                         ABC
                       </button>
@@ -229,7 +221,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'BirdsOfParadise' ? 'active' : ''}`}
                         style={{ fontFamily: "BirdsOfParadise" }}
-                        onClick={() => handleFontButtonClick('BirdsOfParadise', 'BirdsOfParadise')}
+                        onClick={() => handleFontClick('BirdsOfParadise', 'BirdsOfParadise')}
                       >
                         ABC
                       </button>
@@ -237,7 +229,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'Bostante' ? 'active' : ''}`}
                         style={{ fontFamily: "Bostante" }}
-                        onClick={() => handleFontButtonClick('Bostante', 'Bostante')}
+                        onClick={() => handleFontClick('Bostante', 'Bostante')}
                       >
                         ABC
                       </button>
@@ -245,7 +237,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'BrittanySignature' ? 'active' : ''}`}
                         style={{fontFamily:"BrittanySignature"}}
-                        onClick={() => handleFontButtonClick('BrittanySignature', 'BrittanySignature')}
+                        onClick={() => handleFontClick('BrittanySignature', 'BrittanySignature')}
                       >
                         ABC
                       </button>
@@ -257,7 +249,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'Algerian' ? 'active' : ''}`}
                         style={{fontFamily:"Algerian"}}
-                        onClick={() => handleFontButtonClick('Algerian', 'Algerian')}
+                        onClick={() => handleFontClick('Algerian', 'Algerian')}
                       >
                         ABC
                       </button>
@@ -265,7 +257,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'BuffaloItalic1' ? 'active' : ''}`}
                         style={{fontFamily:"BuffaloItalic1"}}
-                        onClick={() => handleFontButtonClick('BuffaloItalic1', 'BuffaloItalic1')}
+                        onClick={() => handleFontClick('BuffaloItalic1', 'BuffaloItalic1')}
                       >
                         ABC
                       </button>
@@ -273,7 +265,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'BuffaloInline2Grunge' ? 'active' : ''}`}
                         style={{fontFamily:"BuffaloInline2Grunge"}}
-                        onClick={() => handleFontButtonClick('BuffaloInline2Grunge', 'BuffaloInline2Grunge')}
+                        onClick={() => handleFontClick('BuffaloInline2Grunge', 'BuffaloInline2Grunge')}
                       >
                         ABC
                       </button>
@@ -285,7 +277,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'Buffalo1' ? 'active' : ''}`}
                         style={{fontFamily:"Buffalo1"}}
-                        onClick={() => handleFontButtonClick('Buffalo1', 'Buffalo1')}
+                        onClick={() => handleFontClick('Buffalo1', 'Buffalo1')}
                       >
                         ABC
                       </button>
@@ -293,7 +285,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'chemistry' ? 'active' : ''}`}
                         style={{fontFamily:"chemistry"}}
-                        onClick={() => handleFontButtonClick('chemistry', 'chemistry')}
+                        onClick={() => handleFontClick('chemistry', 'chemistry')}
                       >
                         ABC
                       </button>
@@ -301,7 +293,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'DancingScript3j68' ? 'active' : ''}`}
                         style={{fontFamily:"DancingScript3j68"}}
-                        onClick={() => handleFontButtonClick('DancingScript3j68', 'DancingScript3j68')}
+                        onClick={() => handleFontClick('DancingScript3j68', 'DancingScript3j68')}
                       >
                         ABC
                       </button>
@@ -313,7 +305,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'Dancingscriptot' ? 'active' : ''}`}
                         style={{fontFamily:"Dancingscriptot"}}
-                        onClick={() => handleFontButtonClick('Dancingscriptot', 'Dancingscriptot')}
+                        onClick={() => handleFontClick('Dancingscriptot', 'Dancingscriptot')}
                       >
                         ABC
                       </button>
@@ -321,7 +313,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'DancingTimeDemoRegular' ? 'active' : ''}`}
                         style={{fontFamily:"DancingTimeDemoRegular"}}
-                        onClick={() => handleFontButtonClick('DancingTimeDemoRegular', 'DancingTimeDemoRegular')}
+                        onClick={() => handleFontClick('DancingTimeDemoRegular', 'DancingTimeDemoRegular')}
                       >
                         ABC
                       </button>
@@ -329,7 +321,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'Daytonica' ? 'active' : ''}`}
                         style={{fontFamily:"Daytonica"}}
-                        onClick={() => handleFontButtonClick('Daytonica', 'Daytonica')}
+                        onClick={() => handleFontClick('Daytonica', 'Daytonica')}
                       >
                         ABC
                       </button>
@@ -341,7 +333,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'FeelingPassionate' ? 'active' : ''}`}
                         style={{fontFamily:"FeelingPassionate"}}
-                        onClick={() => handleFontButtonClick('FeelingPassionate', 'FeelingPassionate')}
+                        onClick={() => handleFontClick('FeelingPassionate', 'FeelingPassionate')}
                       >
                         ABC
                       </button>
@@ -349,7 +341,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'GreatVibesRegular' ? 'active' : ''}`}
                         style={{fontFamily:"GreatVibesRegular"}}
-                        onClick={() => handleFontButtonClick('GreatVibesRegular', 'GreatVibesRegular')}
+                        onClick={() => handleFontClick('GreatVibesRegular', 'GreatVibesRegular')}
                       >
                         ABC
                       </button>
@@ -357,7 +349,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'Neoneon' ? 'active' : ''}`}
                         style={{fontFamily:"Neoneon"}}
-                        onClick={() => handleFontButtonClick('Neoneon', 'Neoneon')}
+                        onClick={() => handleFontClick('Neoneon', 'Neoneon')}
                       >
                         ABC
                       </button>
@@ -369,7 +361,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'OnestySignature' ? 'active' : ''}`}
                         style={{fontFamily:"OnestySignature"}}
-                        onClick={() => handleFontButtonClick('OnestySignature', 'OnestySignature')}
+                        onClick={() => handleFontClick('OnestySignature', 'OnestySignature')}
                       >
                         ABC
                       </button>
@@ -377,7 +369,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'OnestySignature1' ? 'active' : ''}`}
                         style={{fontFamily:"OnestySignature1"}}
-                        onClick={() => handleFontButtonClick('OnestySignature1', 'OnestySignature1')}
+                        onClick={() => handleFontClick('OnestySignature1', 'OnestySignature1')}
                       >
                         ABC
                       </button>
@@ -385,7 +377,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'pirulenrg' ? 'active' : ''}`}
                         style={{fontFamily:"pirulenrg"}}
-                        onClick={() => handleFontButtonClick('pirulenrg', 'pirulenrg')}
+                        onClick={() => handleFontClick('pirulenrg', 'pirulenrg')}
                       >
                         ABC
                       </button>
@@ -397,7 +389,7 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_mains btn ${activeFontButton === 'RocketClouds' ? 'active' : ''}`}
                         style={{fontFamily:"RocketClouds"}}
-                        onClick={() => handleFontButtonClick('RocketClouds', 'RocketClouds')}
+                        onClick={() => handleFontClick('RocketClouds', 'RocketClouds')}
                       >
                         ABC
                       </button>
@@ -416,9 +408,9 @@ const NeonDesign = () => {
                         className={`button_s btn ${activeBackboardButton === 'square' ? 'active' : ''}`}
                         id="btnbox1"
                         
-                        onClick={() => handleBackboardButtonClick('rgba(0, 0, 0, 0.5) 1px 1px 7px', 'square')}
+                        onClick={() => handleBackboardClick('rgba(0, 0, 0, 0.5) 1px 1px 7px', 'square')}
                       >
-                        <img src="/images/Design/box2.png" />
+                        <img src="/images/Design/box2.png" alt="img"/>
                       </button>
                     </div>
                     <div className="col-md-12 col-lg-6 col-12 align-self-center">
@@ -426,9 +418,9 @@ const NeonDesign = () => {
                         type="button"
                         className={`button_s btn ${activeBackboardButton === 'cut to letter' ? 'active' : ''}`}
                         id="btnbox2"
-                        onClick={() => handleBackboardButtonClick('none', 'cut to letter')}
+                        onClick={() => handleBackboardClick('none', 'cut to letter')}
                       >
-                        <img src="/images/Design/box1.png" />
+                        <img src="/images/Design/box1.png" alt="img"/>
                       </button>
                     </div>
                   </div>

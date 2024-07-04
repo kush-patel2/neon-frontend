@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Carousel from '../../Components/Carousel/Carousel'
 import AboutNeon from '../../Components/HomeComponents/About1/AboutNeon'
 import MulticolorNeon from '../../Components/HomeComponents/MulticolorNeon'
@@ -12,6 +12,9 @@ import CreativeConcept from '../../Components/HomeComponents/CreativeConcept'
 import Aboutsection from '../../Components/AboutusComponents/Aboutsection'
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page when the component mounts
+  }, []);
   return (
     <div>
       <Carousel/>
