@@ -49,6 +49,11 @@
   text-wrap: nowrap;
   color: #fefefe;
 }
+.navbar-toggler-icon:focus{
+  border: 2px solid rgb(255, 23, 68);
+  border-radius: 3px;
+  background-color:rgba(66, 66, 66, 0.3);
+}
 
 .custom-nav-link {
   color: white !important;
@@ -56,12 +61,13 @@
 }
 
 .custom-nav-link:hover {
-  color: #FF1744 !important;
+  color: rgb(255, 23, 68) !important;
   transition: 0.5s;
 }
 
 .custom-nav-dropdown .dropdown-toggle {
   color: white !important;
+  
 }
 
 .custom-nav-dropdown .dropdown-toggle:hover {
@@ -70,6 +76,8 @@
 
 .custom-nav-dropdown .dropdown-menu {
   background-color: #101010; /* Matches the dark background */
+  text-align: center;
+  
 }
 
 .custom-nav-dropdown .dropdown-item {

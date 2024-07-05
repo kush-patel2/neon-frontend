@@ -118,7 +118,7 @@ const NeonDesign = () => {
                   </div>
 
                   <div className="row mt-1">
-                    <div className="col-md-4 col-xs-3 align-self-center">
+                    <div className="col-4  align-self-center">
                       <button
                         type="button"
                         data-size="1"
@@ -129,7 +129,7 @@ const NeonDesign = () => {
                         Small
                       </button>
                     </div>
-                    <div className="col-md-4 col-xs-3 align-self-center">
+                    <div className="col-4  align-self-center">
                       <button
                         type="button"
                         className={`button_main btn font-size-btn w-100 ${activeSizeButton === 'medium' ? 'active' : ''}`}
@@ -139,7 +139,7 @@ const NeonDesign = () => {
                         Medium
                       </button>
                     </div>
-                    <div className="col-md-4 col-xs-3 align-self-center">
+                    <div className="col-4  align-self-center">
                       <button
                         type="button"
                         className={`button_main btn font-size-btn w-100 ${activeSizeButton === 'large' ? 'active' : ''}`}
@@ -157,34 +157,42 @@ const NeonDesign = () => {
                     </div>
                   </div>
 
-                  <div className="row mt-1 center-block">
+                  <div className="row mt-1 ">
+
                     <div className="col-md-12 align-self-center">
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'AlexaStdRegular' ? 'active' : ''}`}
+                        className={`button_mains btn  ${activeFontButton === 'AlexaStdRegular' ? 'active' : ''}`}
                         id="btnfont1"
                         style={{fontFamily:'AlexaStdRegular'}}
                         onClick={() => handleFontClick('AlexaStdRegular', 'AlexaStdRegular')}
                         >                      
                         ABC
                       </button>
+                      
+
+                      
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'AlluraRegular' ? 'active' : ''}`}
+                        className={`button_mains btn  ${activeFontButton === 'AlluraRegular' ? 'active' : ''}`}
                         style={{fontFamily:"AlluraRegular"}}
                         onClick={() => handleFontClick('AlluraRegular', 'AlluraRegular')}
                       >
                         ABC
                       </button>
+                      
+
+                      
                       <button
                         type="button"
-                        className={`button_mains btn ${activeFontButton === 'AnandaBlackPersonal' ? 'active' : ''}`}
+                        className={`button_mains btn  ${activeFontButton === 'AnandaBlackPersonal' ? 'active' : ''}`}
                         style={{fontFamily:"AnandaBlackPersonal"}}
                         onClick={() => handleFontClick('AnandaBlackPersonal', 'AnandaBlackPersonal')}
                       >
                         ABC
                       </button>
                     </div>
+
                   </div>
                   <div className="row mt-1">
                     <div className="col-md-12 align-self-center">
@@ -402,10 +410,10 @@ const NeonDesign = () => {
                   </div>
 
                   <div className="row mt-1">
-                    <div className="col-md-12 col-lg-6 col-12 align-self-center">
+                    <div className="col-xl-6 col-xs-12 align-self-center">
                       <button
                         type="button"
-                        className={`button_s btn ${activeBackboardButton === 'square' ? 'active' : ''}`}
+                        className={`button_s btn mb-2 ${activeBackboardButton === 'square' ? 'active' : ''}`}
                         id="btnbox1"
                         
                         onClick={() => handleBackboardClick('rgba(0, 0, 0, 0.5) 1px 1px 7px', 'square')}
@@ -413,7 +421,7 @@ const NeonDesign = () => {
                         <img src="/images/Design/box2.png" alt="img"/>
                       </button>
                     </div>
-                    <div className="col-md-12 col-lg-6 col-12 align-self-center">
+                    <div className="col-xl-6 col-xs-12 align-self-center">
                       <button
                         type="button"
                         className={`button_s btn ${activeBackboardButton === 'cut to letter' ? 'active' : ''}`}
@@ -427,40 +435,40 @@ const NeonDesign = () => {
 
                   <hr style={{backgroundColor: "rgb(188, 188, 188)"}} />
 
-                  <div className="row mt-3">
-                    <div className="col-md-2 align-self-center">
+                  <div className="row mt-3 d-flex">
+                    <div className="col-2  align-self-center">
                       <input
                         type="checkbox"
                         id="Is120Controller"
                         onchange="calculate()"
                       />
                     </div>
-                    <div className="col-md-7 align-self-center">
-                      <label for="myInputText">
+                    <div className="col-8  align-self-center">
+                      <label for="myInputText" className="myInputText2">
                         Neon FloRo 120+ Wifi Smart App Controller 1500.00 Rs.
                       </label>
                     </div>
                   </div>
 
                   <div className="row mt-3">
-                    <div className="col-md-2 align-self-center">
+                    <div className="col-2 align-self-center">
                       <input
                         type="checkbox"
                         id="Is220Controller"
                         onchange="calculate()"
                       />
                     </div>
-                    <div className="col-md-10 align-self-center">
-                      <label for="myInputText">
+                    <div className="col-8 align-self-center">
+                      <label for="myInputText" className="myInputText2">
                         Neon FloRo 220+ Wifi Smart App Controller 2500.00 Rs.
                       </label>
                     </div>
                   </div>
                   <div className="row mt-3">
-                    <div className="col-md-2 align-self-center">
+                    <div className="col-2 align-self-center">
                       <label for="quantity">Quantity</label>
                     </div>
-                    <div className="col-md-5 align-self-center">
+                    <div className="col-5 align-self-center">
                       <div className="counter-container">
                         <button
                           type="button"
@@ -493,20 +501,20 @@ const NeonDesign = () => {
                   <hr style={{backgroundColor: "rgb(188, 188, 188)"}} />
 
                   <div className="row mt-3">
-                    <div className="col-md-5 align-self-center">
+                    <div className="col-5 align-self-center">
                       <h5>
                         <label for="myInputText">Shipping Charge</label>
                       </h5>
                     </div>
-                    <div className="col-md-7 align-self-center">
+                    <div className="col-7 align-self-center">
                       <h5>
                         <label for="myInputText">00 Rs.</label>
                       </h5>
                     </div>
-                    <div className="col-md-5 align-self-center">
+                    <div className="col-5 align-self-center">
                       <label for="input"></label> <h5>Price</h5>
                     </div>
-                    <div className="col-md-7 align-self-center">
+                    <div className="col-7 align-self-center">
                       <label for="input"></label>
                       <h5>
                         <span id="total-price2">00</span> Rs.

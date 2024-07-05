@@ -684,6 +684,20 @@ p {
 	font-weight: 600;
 	text-decoration: none;
 }
+@media (max-width:375px){
+	#footer .ftr_brand a
+{
+	font-size: 22px;
+	
+}
+}
+@media (max-width:320px){
+	#footer .ftr_brand a
+{
+	font-size: 18px;
+	
+}
+}
 #footer .ftr_intro
 {
 	font-family: 'Inter',sans-serif;
@@ -929,3 +943,51 @@ p {
 .text-right {
 	text-align: right !important;
   }
+  .button_main2
+  {
+	  color: var(--color-white) !important;
+	  background: transparent !important;
+	  border: 2px solid var(--color-sec) !important;
+	  padding: 12px 36px;
+	  font-family: 'Poppins', sans-serif;
+	  font-weight: 600;
+	  font-size: 14px;	
+	  -webkit-transition: all 0.3s;
+	  transition: all 0.3s;
+	  -webkit-border-radius: 5px;
+	  -moz-border-radius: 5px;
+	  -ms-border-radius: 5px;
+	  -o-border-radius: 5px;
+	  border-radius: 5px;
+  }
+  .button_main2:hover
+  {
+	  text-decoration: none;
+	  background: var(--color-sec);
+	  color: #fefefe;
+	  -webkit-box-shadow: 2px 2px 20px rgba(255, 23, 68,0.7);
+	  box-shadow: 2px 2px 20px rgba(255, 23, 68,0.7);
+  }
+  .button_main2:focus
+  {
+	  outline: none;
+	  -webkit-box-shadow: 0 0 0;
+	  box-shadow: 0 0 0;
+  }
+  
+  .button_main2 .arrow_go
+  {
+	  -webkit-transition: 0.3s;
+	  transition: 0.3s;
+  }
+  .button_main2:hover> .arrow_go
+  {
+	  -webkit-transform: translateX(10px);
+	  transform: translateX(10px);
+  }
+  
+@media (max-wdith:425px){
+	#viewgallery.button_main2{
+		width: fit-content !important;
+	}
+}

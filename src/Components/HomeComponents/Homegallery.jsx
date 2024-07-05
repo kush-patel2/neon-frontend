@@ -62,7 +62,7 @@ const Homegallery = () => {
                     <Link
                       id="viewgallery"
                       to="/gallery"
-                      className="button_main btn mb-3"
+                      className="button_main2 btn mb-3"
                     >
                       View more&nbsp;&nbsp;
                       <FaAngleRight className="arrow_go" />

@@ -119,10 +119,10 @@ const MultiColorDesign= () => {
                   </div>
 
                   <div className="row mt-1">
-                    <div className="col-md-4 align-self-center">
+                    <div className="col-4 align-self-center">
                       <button
                         type="button"
-                        className={`button_main btn font-size-btn w-75 ${activeSizeButton === 'small' ? 'active' : ''}`}
+                        className={`button_main btn font-size-btn w-100 ${activeSizeButton === 'small' ? 'active' : ''}`}
                         data-size="1"
                         id="btnsmall"
                         onClick={() => handleSizeClick('25px', 'small')}
@@ -130,20 +130,20 @@ const MultiColorDesign= () => {
                         Small
                       </button>
                     </div>
-                    <div className="col-md-4 align-self-center">
+                    <div className="col-4 align-self-center">
                       <button
                         type="button"
-                        className={`button_main btn font-size-btn w-75 ${activeSizeButton === 'medium' ? 'active' : ''}`}
+                        className={`button_main btn font-size-btn w-100 p-1 ${activeSizeButton === 'medium' ? 'active' : ''}`}
                         data-size="2"
                         onClick={() => handleSizeClick('32px', 'medium')}
                       >
                         Medium
                       </button>
                     </div>
-                    <div className="col-md-4 align-self-center">
+                    <div className="col-4 align-self-center">
                       <button
                         type="button"
-                        className={`button_main btn font-size-btn w-75 ${activeSizeButton === 'large' ? 'active' : ''}`}
+                        className={`button_main btn font-size-btn w-100 ${activeSizeButton === 'large' ? 'active' : ''}`}
                         data-size="3"
                         onClick={() => handleSizeClick('40px', 'large')}
                       >
@@ -403,10 +403,10 @@ const MultiColorDesign= () => {
                   </div>
 
                   <div className="row mt-1">
-                    <div className="col-md-12 col-lg-6 col-12 align-self-center">
+                    <div className=" col-xl-6 col-xs-12 align-self-center">
                     <button
                         type="button"
-                        className={`button_s btn ${activeBackboardButton === 'square' ? 'active' : ''}`}
+                        className={`button_s btn mb-2 ${activeBackboardButton === 'square' ? 'active' : ''}`}
                         id="btnbox1"
                         
                         onClick={() => handleBackboardClick('rgba(0, 0, 0, 0.5) 1px 1px 7px', 'square')}
@@ -414,10 +414,10 @@ const MultiColorDesign= () => {
                         <img src="/images/Design/box2.png" />
                       </button>
                     </div>
-                    <div className="col-md-12 col-lg-6 col-12 align-self-center">
+                    <div className=" col-xl-6 col-xs-12 align-self-center">
                     <button
                         type="button"
-                        className={`button_s btn ${activeBackboardButton === 'cut to letter' ? 'active' : ''}`}
+                        className={`button_s btn me-1${activeBackboardButton === 'cut to letter' ? 'active' : ''}`}
                         id="btnbox2"
                         onClick={() => handleBackboardClick('none', 'cut to letter')}
                       >
@@ -431,24 +431,24 @@ const MultiColorDesign= () => {
                   
 
                   <div className="row mt-3">
-                    <div className="col-md-2 align-self-center">
+                    <div className="col-2 align-self-center">
                       <input
                         type="checkbox"
                         id="Is220Controller"
                         onchange="calculate()"
                       />
                     </div>
-                    <div className="col-md-10 align-self-center">
+                    <div className="col-10 align-self-center">
                       <label for="myInputText">
                       Multicolor Changing WIFI SMART APP Controller   1500.00 Rs.
                       </label>
                     </div>
                   </div>
                   <div className="row mt-3">
-                    <div className="col-md-2 align-self-center">
+                    <div className="col-2 align-self-center">
                       <label for="quantity">Quantity</label>
                     </div>
-                    <div className="col-md-5 align-self-center">
+                    <div className="col-5 align-self-center ms-2">
                       <div className="counter-container input-color">
                         <button
                           type="button"
@@ -481,20 +481,20 @@ const MultiColorDesign= () => {
                   <hr style={{backgroundColor: "rgb(188, 188, 188)"}} />
 
                   <div className="row mt-3">
-                    <div className="col-md-5 align-self-center">
+                    <div className="col-5 align-self-center">
                       <h5>
                         <label for="myInputText">Shipping Charge</label>
                       </h5>
                     </div>
-                    <div className="col-md-7 align-self-center">
+                    <div className="col-7 align-self-center">
                       <h5>
                         <label for="myInputText">00 Rs.</label>
                       </h5>
                     </div>
-                    <div className="col-md-5 align-self-center">
+                    <div className="col-5 align-self-center">
                       <label for="input"></label> <h5>Price</h5>
                     </div>
-                    <div className="col-md-7 align-self-center">
+                    <div className="col-7 align-self-center">
                       <label for="input"></label>
                       <h5>
                         <span id="total-price2">00</span> Rs.

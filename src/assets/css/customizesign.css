@@ -61,7 +61,11 @@ body{
 .cntc_form h1, .cntc_form p, .cntc_form div{
     color: white;
 }
-
+@media (max-width:425px){
+    .cntc_form h1{
+        margin-top: 20px;
+    }
+}
 .button_main {
     color: var(--color-white) !important;
     background: transparent !important;
@@ -271,6 +275,14 @@ body{
     -o-border-radius: 10px;
     border-radius: 10px;
 }
+@media (max-width:425px) {
+    .dyn_bdy2 {
+       
+        padding-left: 15px;
+        padding-right: 15px;
+        
+    }
+}
 
 .overlay-texts-white2 {
     position: absolute;
@@ -439,7 +451,7 @@ body{
     .button_main{
         margin-bottom: 10px;
         padding: 10px 20px;
-        font-size: 12px;
+        --bs-btn-font-size: 0.8rem !important;
         height: 50px;
         width: 100px !important;
         margin-right: 20px;
@@ -451,11 +463,14 @@ body{
     .button_mains{
         
         padding: 10px 20px;
-        font-size: 12px;
+        --bs-btn-font-size: 0.8rem !important;
         height: 50px;
-        width: 100px;
+        width: 100px !important;
         margin-right: 20px;
         margin-bottom: 10px;
+    }
+    .myInputText2{
+        font-size: 14px;
     }
   }
 
@@ -463,10 +478,43 @@ body{
     .button_mains{
         
         padding: 5px 0px;
-        font-size: 8px;
+        --bs-btn-font-size: 0.75rem !important;
         height: 50px;
-        width: 80px;
-        margin-right: 10px;
+        width: 70px !important;
+        margin-right: 8px;
         margin-bottom: 10px;
     }
   }
+
+  @media (max-width:1024px){
+    .button_mains{
+        
+        padding: 15px 15px;
+        font-size: 14px;
+        height: 50px;
+        width: 120px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width:768px){
+    .button_mains{
+        
+        padding: 15px 15px;
+        font-size: 14px;
+        height: 50px;
+        width: 90px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+    .counter-container{
+        margin-left: 20px;
+    }
+    .button_s{
+        margin-bottom: 10px;
+        
+    }
+  }
+
+  
