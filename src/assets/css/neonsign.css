@@ -294,3 +294,10 @@
   #news .card {
 	margin-bottom: 20px;
   }
+
+  /* @media (max-width: 575.98px) {
+	.bl_sec {
+	  flex: 0 0 50%;
+	  max-width: 50%;
+	}
+  } */

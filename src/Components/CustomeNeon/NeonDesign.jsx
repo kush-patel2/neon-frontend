@@ -523,7 +523,7 @@ const NeonDesign = () => {
                   </div>
 
                   <hr style={{backgroundColor: "rgb(188, 188, 188)"}} />
-                  <div className="row mt-3">
+                  <div className="row mt-3 mb-2">
                     <div className="s1 col-md-12 align-self-center">
                       <a
                         href="#"

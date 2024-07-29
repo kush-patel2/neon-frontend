@@ -20,7 +20,7 @@ const MulticolorNeon = () => {
     ]
   return (
     <div>
-      <AboutBanner head="Multicolor Neon" sub_head="Neon Sign"/>
+      <AboutBanner head="Neon Sign" sub_head="Neon Sign"/>
       <NeonDesc 
       head="Multicolor Neon"
       p1="Multi-Color Neon offers a dazzling array of hues that can create a unique, eye-catching atmosphere for any occasion, from parties to business events, showcasing a spectrum of colors that's sure to impress and inspire."

@@ -7,13 +7,13 @@ const Footer = () => {
       <section className="ftr_btm">
         <div className="container">
           <div className="row copyright">
-            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 copyright-left">
+            <div className=" col-md-6  copyright-left">
               <h6>
                 <Link to="/">Neon Creative Concept 11</Link>{" "}
                 &nbsp;| All rights reserved.
               </h6>
             </div>
-            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 copyright-right">
+            <div className="col-md-6    copyright-right">
               <h6>
                 Design By :{" "}
                 <a

@@ -9,8 +9,9 @@ const ControllerProd = () => {
       <section id="news">
         <div className="container">
           
-          <div className="row flex-lg-row flex-column">
-            <div className="col-lg-4 col-md-6 col-sm-12 bl_sec mb-3 d-flex align-items-stretch">
+          <div className="row flex-lg-row flex-row">
+
+            <div className="col-lg-4 col-md-4 col-sm-12 bl_sec mb-3 d-flex align-items-stretch">
               <div className="card d-flex flex-column">
                 <div className="bl_img">
                   <img
@@ -56,7 +57,8 @@ const ControllerProd = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-12 bl_sec mb-3 d-flex align-items-stretch">
+            
+            <div className="col-lg-4 col-md-4 col-sm-12 bl_sec mb-3 d-flex align-items-stretch">
               <div className="card d-flex flex-column">
                 <div className="bl_img">
                   <img
@@ -103,7 +105,7 @@ const ControllerProd = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-12 bl_sec mb-3 d-flex align-items-stretch">
+            <div className="col-lg-4 col-md-4 col-sm-12 bl_sec mb-3 d-flex align-items-stretch">
               <div className="card d-flex flex-column">
                 <div className="bl_img">
                   <img
@@ -150,7 +152,7 @@ const ControllerProd = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-12 bl_sec mb-3 d-flex align-items-stretch">
+            <div className="col-lg-4 col-md-4 col-sm-12 bl_sec mb-3 d-flex align-items-stretch">
               <div className="card d-flex flex-column">
                 <div className="bl_img">
                   <img

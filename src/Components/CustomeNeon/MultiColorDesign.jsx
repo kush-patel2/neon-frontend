@@ -33,7 +33,7 @@ const MultiColorDesign= () => {
       <section id="Design-Neon" className="Design-Neon pt-0">
         <div className="container dyn_bdy2">
           <div className="row">
-             <div className="col-md-6 ps-5"> {/*  */}
+             <div className="col-md-6 ps-2"> {/*  */}
               <div className="form-groupp" style={{position: "sticky",top: "0"}}>
                 <div id="MyDiv">
                   <img
@@ -417,7 +417,7 @@ const MultiColorDesign= () => {
                     <div className=" col-xl-6 col-xs-12 align-self-center">
                     <button
                         type="button"
-                        className={`button_s btn me-1${activeBackboardButton === 'cut to letter' ? 'active' : ''}`}
+                        className={`button_s btn me-1 ${activeBackboardButton === 'cut to letter' ? 'active' : ''}`}
                         id="btnbox2"
                         onClick={() => handleBackboardClick('none', 'cut to letter')}
                       >
@@ -503,7 +503,7 @@ const MultiColorDesign= () => {
                   </div>
 
                   <hr style={{backgroundColor: "rgb(188, 188, 188)"}} />
-                  <div className="row mt-3">
+                  <div className="row mt-3 mb-2">
                     <div className="s1 col-md-12 align-self-center">
                       <a
                         href="#"

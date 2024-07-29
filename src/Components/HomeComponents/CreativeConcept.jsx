@@ -11,15 +11,18 @@ const CreativeConcept = () => {
         <div className="row">
           {/* <!--Start Newsletter--> */}
           <div className="col-xl-5 col-lg-6 col-md-12 col-sm-12 align-self-center mb-2">
-            <div className="ftr_brand">
-              <a href="/">
+            <div className="ftr_brand row">
+              <Link to="/" className="col-2 pt-1">
                 <img
                   src="/images/logo.png"
-                  height="40"
+                  height="50"
                   alt="logo"
                 />
-                &nbsp;&nbsp;Neon Creative Concept 11
-              </a>
+                
+              </Link>
+              <Link to="/" className="col-10">
+              Neon Creative Concept 11
+              </Link>
             </div>
             <div className="ftr_intro">
               <p>

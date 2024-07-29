@@ -96,15 +96,17 @@ const Aboutsection = (props) => {
               <p
                 className="h_body"
                 
-              ></p>
-              <p>
-                We believe in the value and respect for people and companies,
+              >
+We believe in the value and respect for people and companies,
                 with whom we work as a trusted partner by sharing skills and
                 objectives. Our products are based on the value and reliability
                 of Made in India, interpreting every need connected to the
                 sectors of visual communication, lighting, art, design, and
                 sanitation. The passion in our work and in innovation guides us
                 towards solutions designed to grow together.
+              </p>
+              <p>
+                
               </p>{" "}
               <p></p>
             </div>

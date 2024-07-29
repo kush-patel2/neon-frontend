@@ -25,6 +25,12 @@
 	color: var(--color-lite);
 	font-size: 16px;
 }
+@media (max-width: 425px){
+	#project_detail p{
+	
+	font-size: 14px;
+}
+}
 #project_detail .pd_inner_cnt .img-fluid
 {
 	height: 100%;
